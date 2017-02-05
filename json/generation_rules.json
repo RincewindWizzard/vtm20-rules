@@ -1,0 +1,78 @@
+{
+  "1": {
+    "stat_max": "10",
+    "blood_pool": "500",
+    "blood_per_turn": "50"
+  },
+  "2": {
+    "stat_max": "10",
+    "blood_pool": "250",
+    "blood_per_turn": "20"
+  },
+  "3": {
+    "stat_max": "10",
+    "blood_pool": "100",
+    "blood_per_turn": "15"
+  },
+  "4": {
+    "stat_max": "9",
+    "blood_pool": "50",
+    "blood_per_turn": "10"
+  },
+  "5": {
+    "stat_max": "8",
+    "blood_pool": "40",
+    "blood_per_turn": "8"
+  },
+  "6": {
+    "stat_max": "7",
+    "blood_pool": "30",
+    "blood_per_turn": "6"
+  },
+  "7": {
+    "stat_max": "6",
+    "blood_pool": "20",
+    "blood_per_turn": "4"
+  },
+  "8": {
+    "stat_max": "5",
+    "blood_pool": "15",
+    "blood_per_turn": "3"
+  },
+  "9": {
+    "stat_max": "5",
+    "blood_pool": "14",
+    "blood_per_turn": "2"
+  },
+  "10": {
+    "stat_max": "5",
+    "blood_pool": "13",
+    "blood_per_turn": "1"
+  },
+  "11": {
+    "stat_max": "5",
+    "blood_pool": "12",
+    "blood_per_turn": "1"
+  },
+  "12": {
+    "stat_max": "5",
+    "blood_pool": "11",
+    "blood_per_turn": "1"
+  },
+  "13": {
+    "stat_max": "5",
+    "blood_pool": "10",
+    "blood_per_turn": "1"
+  },
+  "14": {
+    "stat_max": "5",
+    "blood_pool": "10",
+    "blood_per_turn": "1"
+  },
+  "15": {
+    "stat_max": "5",
+    "blood_pool": "10",
+    "blood_per_turn": "1"
+  }
+}
+
