@@ -1,0 +1,6 @@
+---
+name: Ahriman’s Demesne
+---
+
+This power allows the vampire to summon a darkness so oppressive that it extinguishes the light of life - or unlife - of any victim trapped within it. Ahriman’s Demesne creates a 50-foot (or 15-meter) radius of void that issues from the Cainite’s hand and takes away the bodies of those it claims when it vanishes. The overwhelming darkness destroys friend and foe alike, claiming anyone unfortunate enough to be within its circumference.
+_System_: The player spends two points of Willpower and concentrates for three turns. During this time, the blackness billows out of the character’s hand, growing to fill the area. At the end of the third turn, the player rolls ^Manipulation + Occult^ (difficulty 6). Everyone in the darkness’ area suffers that many health levels of damage (aggravated, if the victims are vampires) outright - six successes yield six levels of damage, not six dice of damage. After Ahriman’s Demesne does its damage, it collapses, taking with it the bodies of any who died when they came in contact with the dreadful shadow.

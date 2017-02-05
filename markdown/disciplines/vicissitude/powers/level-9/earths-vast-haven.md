@@ -1,0 +1,6 @@
+---
+name: Earth’s Vast Haven
+---
+
+This power, developed in the nights when the Tzimisce were the terrible masters of Eastern Europe, allows the vampire to sink into and disperse himself through the ground. Unlike the Protean power of EarthMeld, however, the vampire actually dissolves his body into the ground; nothing short of a wide-area explosion can affect him, and he may not be dug up bodily. In addition, from sunset to sunrise, the vampire may see and hear everything happening in his environment through his mystical connection to the land. The mere fact that this power exists terrifies many Tzimisce, who are secretly unsure of whether or not the diablerie of their Antediluvian was successful.
+_System_: This power costs six blood points to activate, and it lasts as long as the vampire wishes to remain contained within the soil. As per the Cocoon, the vampire may use mental Disciplines that do not require physical solvency or eye contact. He may communicate mentally with anyone who wanders into the area under which he rests.

@@ -1,0 +1,6 @@
+---
+name: Crimson Woad
+---
+
+The Lhiannan traces mystical runes or script on her own body in vitae, inviting spirits of war to infuse her and gird her for battle. While so imbued, she ignores many wounds and retains greater control of her mind as the spirits direct her Beast. The Lhiannan can also lash out at her enemies with a fierce, blood-borne attack.
+_System_: The character spends one scene tracing the woad on her body; this costs one blood point. The player then rolls ^Intelligence + Occult^ (difficulty 7). Each success enables the character to ignore one die of wound penalties from injury. It also subtracts one from the difficulty to avoid frenzy or Rötschreck. This ability lasts through one scene. Additionally, if the character receives more than four health levels of damage, the mystic inscriptions are ruined, and the spirits flee her body. The Lhiannan may also lash out at her enemies, adding the fury of the woad to her attack. The player may add the number of successes achieved on the above roll to the number of dice rolled for damage for a single close-combat attack (this ability can only be used once per application of Crimson Woad).

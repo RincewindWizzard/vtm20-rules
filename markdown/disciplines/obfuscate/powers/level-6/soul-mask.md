@@ -1,0 +1,6 @@
+---
+name: Soul Mask
+---
+
+In addition to concealing her form, a vampire who has developed Soul Mask is able to conceal her aura. She may display whatever combination of colors and shades she wishes, or may appear to have no aura whatsoever. This power is of particular use to those of elder Generation who have reached such heights of power through diablerie.
+_System_: The use of this power allows the projection of only one aura (or lack thereof) - the vampire chooses the precise colors to be displayed when she first develops Soul Mask. If the character has no experience with the use of Aura Perception, she may not choose an alternate aura, as she has no idea what one would look like, though she can still choose to display no aura whatsoever. Soul Mask can be bought multiple times, if desired, in order to give a vampire multiple alternate auras from which to choose. Unless the player states otherwise, Soul Mask is always in effect. If the character has bought Soul Mask two or more times, her “default” aura displayed is the first one she learned.

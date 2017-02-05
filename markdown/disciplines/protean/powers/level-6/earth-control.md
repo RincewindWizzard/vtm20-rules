@@ -1,0 +1,6 @@
+---
+name: Earth Control
+---
+
+An Earth Melded character with this power is no longer confined to the resting place she selected the night before. She can pass through the ground as if it were water, “swimming” through the earth itself. Some elders use this as a means of unobstructed and unobtrusive travel, while others find it a highly effective means of maneuvering in combat.
+_System_: This power is in effect whenever a character is Earth Melded, with no additional roll or expenditure necessary. While in the ground, a vampire can propel herself at half of her normal walking speed. She cannot see, but gains a supernatural awareness of her underground surroundings out to a range of 50 yards or meters. Water, rock, tree roots, and cement all effectively block her progress; she can only move through earth and substances of similar consistency, such as sand or fine gravel. If two or more vampires attempt to interact underground, only direct physical contact is possible. All damage dice pools in this case are halved, and dodge and parry attempts are at -2 difficulty. If an underground chase takes place, it is resolved with an extended, contested ^Strength + Athletics^ roll (see p.261).

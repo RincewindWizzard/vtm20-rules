@@ -1,0 +1,6 @@
+---
+name: Summon the Herald of Topheth
+---
+
+Using the same skill that allows for calling up demon-fire, the Baali can call a minion of his masters to Earth. Although the names assigned them differ (angel, demon, daeva, djinn, efreet, malakim, shedim, and countless others), the end results are the same. This being is under the Baali’s control, at least for a short time after being summoned. Yet scholars who have studied the blasphemous rite by which this Discipline is enacted note that no provision is made for banishing the Herald.
+_System_: To summon a Herald of Topheth, the Demon must spend at least three blood points and perform an infernal ceremony. Heralds of Topheth have the following stats: Attributes 10/7/3, Abilities (15 points worth), Willpower 8, Disciplines (10 points worth), Fortitude of at least 3, and the capacity to heal one health level at least every other round. Storytellers should feel free to alter these guidelines based on the power level of the troupe and the form the Herald takes. Though most celestial beings chafe at the notion of wearing a single shape, many adopt those common to myth and legend; preternatural succubi or angels, reptilian horrors, and bat-winged monsters are among the most often seen.

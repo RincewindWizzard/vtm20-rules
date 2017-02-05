@@ -1,0 +1,6 @@
+---
+name: Shepherd’s Watch
+---
+
+The Salubri with this level of mastery of Obeah can create an invisible barrier between those under his care and those who would do them harm. The Salubri himself must stand among his charges as he generates this barrier; he cannot defend them from afar. Enemies armed with guns or other ranged weapons can still attack, but none may approach closer than a few paces.
+_System_: The player spends two Willpower points. Erecting this barrier is a standard action, but maintaining it from turn to turn or dropping it is a reflexive action. The invisible barrier extends to about a 3 yard/1 meter radius from the character, and no one outside that barrier may cross it while she maintains the power. Those within it at its creation may leave and return, however. The barrier moves with the Salubri. It cannot be maintained at a distance. Those who wish to cross the barrier from the outside, whether friendly or hostile, must best the character in an extended, resisted ^Willpower^ roll (difficulty equals the opponent’s current Willpower for the Salubri, and the Salubri’s current Willpower for the opponent). The opponent may cross the barrier as soon as he accumulates three more net successes than the Salubri.

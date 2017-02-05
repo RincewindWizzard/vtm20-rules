@@ -1,0 +1,6 @@
+---
+name: Restructure
+---
+
+The elder with this fearsome power has the ability to twist his victims’ psyches at their most basic levels, warping their very beings. The subject of Restructure retains her memories, but her outlook on life changes completely, as if she has undergone a sudden epiphany or religious conversion. This effect goes much deeper than the implantation of a derangement; it actually performs a complete rewrite of the victim’s personality.
+_System_: As the description says, this power allows the vampire to change his target’s Nature to one more suitable to his ends. To accomplish this, the character must make eye contact (p.152) with his intended victim. The player rolls ^Manipulation + Subterfuge^ (difficulty equals the victim’s Wits + Subterfuge). If he rolls a number of successes equal to or greater than the target’s Self-Control/Instinct, the target’s Nature changes to whatever the player using Restructure desires. This effect is permanent and can be undone only by another application of Restructure (though subtle differences from the character’s original Nature may still remain, as it is impossible for such a fundamental change to occur flawlessly). A botch on this roll changes the character’s own Nature to that of his intended victim.

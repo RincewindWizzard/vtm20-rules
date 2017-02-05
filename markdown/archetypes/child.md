@@ -1,0 +1,6 @@
+---
+Name: "Child"
+---
+
+The Child is still immature in personality and temperament. He wants what he wants now, and often prefers someone to give it to him. Although he can typically care for himself, he would rather have someone cater to his capricious desires. Some Child Archetypes are actually innocent rather than immature, ignorant of the cold ways of the real world. Actual children, spoiled individuals, and some drug abusers are Child Archetypes. Kindred with the Child Archetype might have not yet fully reached an understanding of the world and have some characteristic such as cruelty, entitlement, sympathy, or hunger that is out of balance with their other personality aspects, as they haven’t yet reached the “rounded” state of adulthood. Note that a Child Archetype need not be a physical, literal child at the time of Embrace. Some people simply never grow up.
+ - Regain a point of Willpower whenever you manage to convince someone to help you with no gain to herself, or to nurture you.

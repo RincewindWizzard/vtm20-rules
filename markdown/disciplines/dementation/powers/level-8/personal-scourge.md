@@ -1,0 +1,6 @@
+---
+name: Personal Scourge
+---
+
+Similar to the Auspex power of Psychic Assault (p.141), this fearsome ability allows the elder to turn the very strength of her victim’s mind against him, inflicting physical harm with the power of his own will. Victims of this self-powered attack spontaneously erupt in lacerations and bruises, spraying blood in every direction and howling in agony. Those who have observed such an attack with Auspex note that the victim’s aura swirls with violent psychosis and erupts outward in writhing appendages - a sight that can make even the most jaded Tzimisce quail.
+_System_: The vampire must touch or establish eye contact (p.152) with her target. The player rolls ^Manipulation + Empathy^ (difficulty equal to the target’s Stamina + Self-Control/Instinct) and spends two Willpower points. For a number of turns equal to the number of successes rolled, the victim rolls his own permanent Willpower as lethal damage against himself. This damage can be soaked with his own Humanity or Path of Enlightenment (difficulty 6); Fortitude does not add to this soak dice pool, nor does body armor. He may take no actions during this time other than thrashing and gibbering; this includes spending blood to heal.

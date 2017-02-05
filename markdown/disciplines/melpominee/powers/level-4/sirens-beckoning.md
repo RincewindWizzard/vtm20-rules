@@ -1,0 +1,6 @@
+---
+name: Siren’s Beckoning
+---
+
+The Daughters of Cacophony don’t spread madness as surely (or as visibly) as the Malkavians, but their songs are definitely detrimental to one’s sanity. With this power, the Daughter can drive any listener to madness. Most of the time, the victim is too fascinated to realize that he should leave the area and block out the music from his mind.
+_System_: Siren’s Beckoning requires an extended, resisted roll. The player rolls ^Manipulation + Performance^ (difficulty equal to the target’s current Willpower); the victim resists with a Willpower roll (difficulty equal to the singer’s ^Appearance + Performance^). If the singer accumulates five more successes than the victim at any point, the hapless soul acquires a new derangement or Psychological Flaw of the Storyteller’s choice. This derangement normally lasts for one night, with an additional night per success over five. With a total of 20 net successes, the Daughter can make it permanent. Multiple Daughters may use this Discipline in concert.

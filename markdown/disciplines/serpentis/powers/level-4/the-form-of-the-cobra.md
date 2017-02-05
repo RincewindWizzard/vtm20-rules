@@ -1,0 +1,6 @@
+---
+name: The Form of the Cobra
+---
+
+The Cainite may change his form into that of a huge black cobra. The serpent weighs as much as the vampire’s human form, stretches over 10 feet or three meters long, and is about 20 inches (50 cm) around. The Form of the Cobra grants several advantages, including a venomous bite, the ability to slither through small spaces, and a greatly enhanced sense of smell. The character may use any Disciplines while in this form save those that require hands (such as Feral Claws).
+_System_: The vampire spends one blood point; the change is automatic, but takes three turns. Clothing and small personal possessions transform with the vampire. The vampire remains in serpent form until the next dawn, unless he desires to change back sooner. The Storyteller may allow the Setite bonus dice on all Perception rolls related to smell, but the difficulties for all hearing rolls are increased by two. The cobra’s bite inflicts damage equal to the vampire’s, but the vampire does not need to grapple his victim; furthermore, the poison delivered is fatal to mortals.

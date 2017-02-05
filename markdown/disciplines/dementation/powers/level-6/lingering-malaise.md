@@ -1,0 +1,6 @@
+---
+name: Lingering Malaise
+---
+
+While lesser Dementation powers allow a vampire to inflict temporary (though often long-lasting) madness upon a victim, elders of the Clan have developed the ability to infect the minds of their victims with permanent maladies. Lingering Malaise causes permanent psychological shifts within the victim, making him, as one Gangrel elder remarked, “an honorary Lunatic”.
+_System_: The character speaks to his victim for at least a minute, describing the derangement that Lingering Malaise will inflict. The player rolls ^Manipulation + Empathy^ (difficulty equal to the victim’s current Willpower points); the victim resists with a Willpower roll (using his permanent Willpower at difficulty 8). If the user of Lingering Malaise scores more successes, the victim gains a permanent derangement chosen by the individual who inflicts it. Lingering Malaise may only be used to inflict one derangement per night on any given victim, though multiple attempts may be made until the derangement takes hold.

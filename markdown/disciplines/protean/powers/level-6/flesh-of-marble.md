@@ -1,0 +1,6 @@
+---
+name: Flesh of Marble
+---
+
+Tales have long spoken of the combat prowess of Gangrel elders and of their inhuman resilience. Poorly informed individuals believe the stories of swords shattering and bullets flattening against immortal skin to be exaggerated reports of the effects of Fortitude. Those with more reliable information know that such tales result from encounters with vampires who have developed Flesh of Marble. The skin of an elder with Flesh of Marble becomes in essence a sort of flexible stone, although it appears (and feels) no different than normal skin and muscle.
+_System_: The player spends three blood points to activate Flesh of Marble, which goes into effect instantly. The effects of the power last for the remainder of the scene. While the power is functioning, the damage dice pools of all physical attacks made against the character are halved (round down). That includes assaults made with fists, claws, swords, firearms, and explosions, but not fire, sunlight, or supernatural powers (unless the effect in question is a direct physical attack, such as a rock hurled by means of Movement of the Mind). Additionally, while this power is in effect, a character can attempt to parry melee attacks with his bare hands as if he were holding some form of weapon.

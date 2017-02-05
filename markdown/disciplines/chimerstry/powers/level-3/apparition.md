@@ -1,0 +1,6 @@
+---
+name: Apparition
+---
+
+Not really a power unto itself, Apparition allows a vampire to give motion to an illusion created with Ignis Fatuus or Fata Morgana. Thus, the Cainite could create the illusion of a living being, running water, futtering drapes, or a roaring fire.
+_System_: The creator spends one blood point to make the illusion move in one significant way, or in any number of subtle ways. For example, the vampire could create the illusion of a lurking mugger lurching at her victim, or she could create the illusion of a desolate street, down which a chill wind blows trash while a streetlamp fickers and hums. Taking complicated actions besides maintaining the illusion - that is, anything that would require a dice roll - first requires success on a ^Willpower^ roll, resulting in the dissolution of the false construct if the roll fails. Once the creator stops concentrating on the illusion, it can continue in simple, repetitive motions - roughly speaking, anything that can be described in a simple sentence, such as a guard walking back and forth in front of a steel door. After that, the vampire cannot regain control over the illusion - she can either allow it to continue moving as ordered, or let it fade as described under Ignis Fatuus.

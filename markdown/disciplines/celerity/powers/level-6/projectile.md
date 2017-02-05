@@ -1,0 +1,6 @@
+---
+name: Projectile
+---
+
+Despite the fact that a vampire with Celerity moves at incredible speeds, any bullets he fires or knives he throws while in this state don’t move any faster than they normally would. Scientifically minded Kindred have been baffed by the phenomenon for centuries, but more pragmatic ones have found a way to work around it. Projectile enables a vampire to take his preternatural speed and transfer it into something he has thrown, fired, or launched.
+_System_: Projectile requires the expenditure of a blood point. In addition, the player must decide how many levels of his character’s Celerity he is putting into the speed of the launched object. Thus, a character with Celerity 6 in addition to Projectile could decide to put three dots’ worth of speed into a knife he is throwing, and use the other three dots as dice or potential extra actions as per normal. Each dot of Celerity infused into a thrown object becomes an automatic success to the attack’s damage roll, assuming the weapon or projectile actually hits.

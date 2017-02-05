@@ -1,0 +1,6 @@
+---
+Name: "Curmudgeon"
+---
+
+A Curmudgeon is bitter and cynical, finding flaws in everything and seeing little humor in life or unlife. He is often fatalistic or pessimistic, and has very little esteem for others. To the Curmudgeon, the glass is never more than half-full, though it may be damn near empty when other people are involved. Many internet junkies, pop-culture fans, and Generation X’ers are Curmudgeons. Kindred Curmudgeons see elder oppression or spoiled neonates running amok behind every development in undead society, and may or may not rise beyond acerbic grumbling to change any problems they perceive.
+ - Regain a point of Willpower whenever someone does something specific and negative, just like you said they would. You must predict and quantify this failure aloud, such as by warning, “The Prince is going to fuck us on this one,” or “Just watch, that Malkavian’s ghoul is going to do something really reckless”. You may simply whisper your prophecy of grief to the Storyteller if you wish, instead of announcing it to the whole troupe.

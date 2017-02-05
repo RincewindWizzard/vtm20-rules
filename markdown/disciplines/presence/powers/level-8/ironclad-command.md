@@ -1,0 +1,6 @@
+---
+name: Ironclad Command
+---
+
+Any individual can normally resist the powers of Presence for a brief time through an effort of will. Some elder Toreador and Ventrue have developed such force of personality that their powers of Presence cannot be resisted without truly heroic efforts.
+_System_: This power is always in effect once it has been learned. A mortal may not spend Willpower to resist the character’s Presence (for purposes of this power, the definition of “mortal” does not include supernaturally active humans such as ghouls or those who possess True Faith). A supernatural being must roll Willpower (difficulty of the character’s Willpower + 2; difficulties over 10 mean that the roll cannot even be attempted) the first time he attempts to spend a Willpower point to overcome the character’s Presence. For the rest of the night, the maximum number of Willpower points he can spend to resist the vampire’s Presence powers is equal to the number of successes he rolled. A botch doubles the character’s Presence dice pools against the hapless victim for the remainder of the night.

@@ -1,0 +1,7 @@
+---
+name: Total Insanity
+---
+
+The vampire coaxes the madness from the deepest recesses of her target’s mind, focusing it into an over-whelming wave of insanity. This power has driven countless victims, vampire and mortal alike, to unfortunate ends.
+_System_: The Kindred must gain her target’s undivided attention for at least one full turn to enact this power. The player spends a blood point and rolls ^Manipulation + Intimidation^ (difficulty of her victim’s current Willpower points). If the roll is successful, the victim is afflicted with five derangements of the Storyteller’s choice (see p.290). The number of successes determines the duration.
+<table><tr><th>Successes</th><th>Result</th></tr><tr><td>1 success</td><td>One turn</td></tr><tr><td>2 successes</td><td>One night</td></tr><tr><td>3 successes</td><td>One week</td></tr><tr><td>4 successes</td><td>One month</td></tr><tr><td>5+ successes</td><td>One year</td></tr></table>On a botch ... well, the Storyteller can decide what a vampire inflicts upon herself by attempting to incite the primal hells lurking within the darkest recesses of a victim’s mind. The victim (or the target of a botch) can spend a number of Willpower points equal to the successes rolled to end the duration prematurely. The Storyteller decides when such Willpower points can be spent (such as after a therapy session or after a friend has managed to prove a particular delusion to be false).

@@ -1,0 +1,6 @@
+---
+name: Tangle Atropos’ Hand
+---
+
+This manifestation of Temporis is at once the most flagrant and subtle twist of time - the power of second chances. The existence of such power is only a theory and a fearfully whispered rumor, for who can ever know when or how time itself unraveled and changed?
+_System_: The player spends a dot of Willpower and three blood points and rolls ^Wits + Occult^ (difficulty 8). Every additional point of permanent Willpower spent beyond the first adds one automatic success to the roll. Use of this power is reflexive and may be done at any moment, even on a turn in which the vampire has used other Disciplines. If successful, the Cainite’s mind flashes back to his earlier self with full memory of the events that transpired and now only might transpire. This rewind encompasses one turn for every success rolled, and inflicts an equal number of levels of unsoakable aggravated damage. Assuming the vampire does nothing, every event plays out exactly as before. Once the vampire takes a new action of any sort, time shifts to encompass a new future and fate is no longer fixed.

@@ -1,0 +1,6 @@
+---
+name: Putrefaction
+---
+
+The character can, with a touch, inflict decay upon a target. Hair falls out, teeth loosen, flesh rots and fungus grows on the skin. This power works on targets living and undead, and is obviously quite unsettling both physically and psychologically.
+_System_: This power first requires that the character touch his intended target. The player then rolls ^Dexterity + Medicine^ (difficulty of the target’s Stamina + Fortitude) and spends a blood point. Success inflicts one health level of lethal damage on the target and removes one point of the victim’s Appearance. This Appearance loss returns to vampires at the rate of one point per night, but is permanent for mortals (though plastic surgery can correct mortals’ physical disfigurement). If a mortal suffers three or more health levels of damage from repeated uses of this power in one scene, gangrene or other ailments may occur. Putrefaction can also be used on plants, in which case the target becomes blighted and withered. It cannot, however, be used on inanimate objects such as cars or wooden stakes.

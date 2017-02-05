@@ -1,0 +1,7 @@
+---
+name: Necrosis
+---
+
+A more horrific and potent form of Putrefaction, this power causes flesh to decay and slough off, exposing the bone beneath. Use of this power can render an opponent unable to move from lack of muscle tissue.
+_System_: The Samedi must make contact with the victim. The player spends two blood points and rolls ^Dexterity + Medicine^ (difficulty of the target’s Stamina + Fortitude). The victim takes a number of health levels of lethal damage equal to the number of successes rolled and suffers additional effects as listed below.
+<table><tr><th>Successes</th><th>Effects</th></tr><tr><td>1 success</td><td>No additional effects</td></tr><tr><td>2 successes</td><td>Lose one point of Appearance</td></tr><tr><td>3 successes</td><td>Lose a point each of Appearance and Dexterity</td></tr><tr><td>4 successes</td><td>Lose a point each of Appearance, Dexterity, and Strength</td></tr><tr><td>5+ successes</td><td>Lose two points of Appearance and one each of Dexterity and Strength </td></tr></table>Attributes lost in this manner are regained when all damage from the Necrosis attack is healed. If a victim is reduced to zero Strength or Dexterity, he is unable to move except for weak flailing and crawling but may still use Disciplines and spend blood points normally.

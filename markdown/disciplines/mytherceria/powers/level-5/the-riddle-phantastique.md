@@ -1,0 +1,6 @@
+---
+name: The Riddle Phantastique
+---
+
+The Kiasyd whispers a riddle to an opponent, and the riddle consumes his mind. The target can do nothing until he solves the riddle, and no one can help him - answers provided by others, even correct answers, fail to counteract this affiction.
+_System_: The player rolls ^Manipulation + Occult^ (difficulty of the victim’s current Willpower). After a successful roll, the victim can do nothing but sit and ponder the Riddle until she accumulates three times the riddler’s successes. The subject rolls Wits + Occult (difficulty 8, plus or minus the number of derangements the victim has, at the Storyteller’s discretion). She makes this roll as soon as she is told the Riddle, and then once per hour until she has gathered enough successes. Should the victim botch on a roll to solve the Riddle, she takes one level of lethal damage as the mystical enigma racks her body, and she loses all successes from the accumulated total. This damage cannot be healed until the Riddle has been solved. The riddler can end this trance by telling the victim the answer, but no-one else can.

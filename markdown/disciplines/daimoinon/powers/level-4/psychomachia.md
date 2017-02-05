@@ -1,0 +1,6 @@
+---
+name: Psychomachia
+---
+
+With this power, the Baali combines his ability to read the psyche of a victim with the ability to summon up matter from the Outer Dark. Psychomachia pits a victim against the most dangerous, shameful parts of her own subconscious.
+_System_: The vampire, after learning the targets tragic flaw (such as after using Sense the Sin, above), forces the subject’s player to roll her lowest Virtue (difficulty 6). Failing this roll pits the target against an apparition summoned from her darker self, perceptible to the subject only. The target may see or feel his abusive father, a long-dead lover, a childhood bogeyman, or (for Kindred victims) even the Beast itself. A botch indicates the target has been overwhelmed and frenzies - or, worse, becomes possessed by his inner demons. This imaginary antagonist may be wholly narrated, or assigned Traits equivalent or slightly inferior to the victim’s, at the Storyteller’s option. All injuries sustained by the target in such an encounter are illusory (substitute catatonia or torpor for death as appropriate) and vanish upon the phantasm’s defeat or the Baali’s loss of concentration.

@@ -1,0 +1,7 @@
+---
+name: Summon Spirit Beasts
+---
+
+The vampire might not fully understand the link between “animal” and “animal-spirit”, but spirits of aggressive animals are usually more than willing to take on a physical body and fight for the vampire. Spirits of curious animals, meanwhile, seem to enjoy unlocking doors or following people. With this power, the Ahrimane can summon up the spirit of an animal indigenous to the area and send it to do what comes naturally. The spirit assumes the corporeal form of the appropriate animal, and is capable of whatever the animal would normally be able to do. The animal can follow simple telepathic commands, and is slightly more intelligent than a normal animal would be (but still not as intelligent as a person).
+_System_: The animal summoned must be native to the area - just because the local zoo hosts a tiger doesn’t mean there are tiger-spirits running about. The player must spend one blood point and roll ^Charisma + Animal Ken^ (difficulty 7). The number of successes indicates how long the spirit remains material. The spirits have the same number of health levels their physical counterparts would normally have (see p.388 for some sample animals’ traits). If they are reduced to Incapacitated, they discorporate.
+<table><tr><th>Successes</th><th>Duration</th></tr><tr><td>1 Success</td><td>One Turn</td></tr><tr><td>2 Successes</td><td>Five Turns</td></tr><tr><td>3 Successes</td><td>One Hour</td></tr><tr><td>4 Successes</td><td>One Night</td></tr><tr><td>5 Successes</td><td>One Week</td></tr></table>

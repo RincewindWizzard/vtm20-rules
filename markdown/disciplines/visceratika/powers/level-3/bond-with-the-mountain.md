@@ -1,0 +1,6 @@
+---
+name: Bond with the Mountain
+---
+
+The Gargoyle sinks into a stone surface, disappearing into the rock until he wishes to reappear. This power allowed Gargoyles to invade their masters’ enemies’ strongholds, fight until sunrise, then meld with the rocks or stone walls and reappear the next evening. In modern nights, it can take the place of a haven for itinerant Runaways. Unlike the Earth Meld power (p.199) which it resembles, Bond with the Mountain does not conceal the Gargoyle completely. A faint outline of his body can be seen in the rock where he hides.
+_System_: The player spends two blood points, and the merge takes four turns to complete. This power functions in a fashion similar to the Protean 3 power of Earth Meld, and may only be performed upon bare rock or a similar substance. However, the Gargoyle does not sink fully into the substance with which he merges, and his outline can be detected within the stone with a successful Perception + Alertness roll (difficulty 9). A Gargoyle attacked while Bonded with the Mountain has triple his normal soak dice pool against all forms of attack. However, if he sustains three or more lethal health levels of damage from a single attack, he is forced out of his bond and suffers disorientation similar to that experienced by an Earth Melded character whose slumber is interrupted.

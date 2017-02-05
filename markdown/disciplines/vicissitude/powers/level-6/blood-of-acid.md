@@ -1,0 +1,6 @@
+---
+name: Blood of Acid
+---
+
+At this level of mastery, the vampire has converted his blood to a viscous acid. Any blood he consumes likewise becomes acid, which is corrosive enough to burn human (and vampiric flesh) as well as wood. This effect is particularly potent when the vampire assumes the Bloodform. One of the side effects of this power is the complete inability to create new vampires and ghouls, or give blood to another vampire - the acid would corrode them as they drank it. The obvious benefit, however, is that would-be diablerists are likewise unable to devour the Cainite’s blood.
+_System_: Each acidified blood point that comes in contact with something other than the vampire himself does five dice worth of aggravated damage. If the vampire is injured in combat, his blood may splatter on an opponent - foes must make Dexterity + Athletics rolls to avoid the blood, which must be accomplished by splitting their dice pools. (Unless an opponent knows the vampire has this power, she’s unlikely to split her dice pool on her first attack, which causes many Tzimisce to cackle with glee).

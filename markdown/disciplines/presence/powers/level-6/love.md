@@ -1,0 +1,6 @@
+---
+name: Love
+---
+
+The blood bond is one of the most powerful tools in an elder’s inventory. However, more and more childer are aware of how to avoid being bound, so alternatives are needed. The Presence power called Love is one such alternative, as it simulates the effects of the bond without any of the messy side effects. While not as sure a method of control as a true blood bond, nor as long-lasting, Love is still an extremely potent means of command.
+_System_: The player spends a blood point and rolls ^Charisma + Subterfuge^ (difficulty equal to the target’s current Willpower points). Success on the roll indicates that the victim feels as attached to the character as if he were blood bound to her. Each success also reduces the victim’s dice pool by one die for any Social rolls to be made against the character. A botch makes the target immune to all of the character’s Presence powers for the rest of the night. This power lasts for one scene and can be applied to the same victim over multiple scenes in the same night.

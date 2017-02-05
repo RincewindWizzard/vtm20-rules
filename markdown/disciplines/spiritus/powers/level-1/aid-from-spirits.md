@@ -1,0 +1,6 @@
+---
+name: Aid from Spirits
+---
+
+Spirits are everywhere, but invisible to most living (and unliving) beings. This power allows the vampire to briefy rouse the spirit of an object, making that object perform its intended function better and more efficiently. It in no way makes the spirit well-disposed toward the vampire - not that this usually matters to the Ahrimane.
+_System_: The character touches the object, and the player spends a blood point and rolls ^Manipulation + Occult^ (difficulty 6). If the roll succeeds, the player receives a bonus to her dice pool using that item, equal to the number of successes rolled. For example, if the character uses this power on a gun and the player rolls three successes, she then receives a +3 to her next Firearms roll made with that gun. Unused bonuses fade at the end of the scene, and multiple uses of this power do not combine (the most recent use trumps any previous uses). The character can, however, use the power on multiple objects she uses in the same scene, so long as she has the blood for it.

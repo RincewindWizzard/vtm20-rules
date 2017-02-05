@@ -1,0 +1,6 @@
+---
+name: Flow Within the Mountain
+---
+
+The Gargoyle is no longer restricted to hiding within stone. Now, he can flow through stone like lava working its way down a mountainside, emerging from the hiding place at any point he wishes. Since this power works on cement or concrete as well as rock, the streets of a modern metropolis afford a Gargoyle some very interesting assassination tools.
+_System_: Once the character has used Bond with the Mountain, the player spends two more blood points to activate Flow Within the Mountain for the duration of the scene. The Gargoyle can move within stone and cement (otherwise using the same rules as the Protean power Earth Control, p.200). The character can also use this power to walk through a stone wall and emerge on the other side without first using Bond with the Mountain. In this case, the player spends one blood point and rolls Strength (difficulty 8; Potence adds dice or successes normally). The Gargoyle may flow through a maximum thickness in feet equal to the number of successes rolled, or 30 times the number of successes rolled in centimeters. If the wall or barrier is thicker than this, the character is trapped within it until he is chiseled out or uses Flow Within the Mountain to escape.

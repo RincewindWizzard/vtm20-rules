@@ -1,0 +1,7 @@
+---
+name: Chanjelin Ward
+---
+
+The vampire inscribes a ward on an object, a location, or a person. That ward disorients and befuddles anyone that sees it, meaning that even if an intruder can penetrate a Weirdling’s security and steal an object of value, he’s unlikely to be able to find his way to the exit. Spiteful Kiasyd use these wards as punishment - one story tells of a Weirdling that drew a ward on an enemy’s shirt as dawn approached, and then watched (from safety) as the unfortunate vampire burned in the sun, unable to remember which way to run.
+_System_: The vampire creating the ward inscribes the symbol in a visible location - on a library door, book-shelf, or an individual’s clothing - and the player rolls ^Intelligence + Larceny^ (difficulty 7 for inanimate objects, or the subject’s current Willpower +2). Anyone entering the warded area or touching the warded object loses two dice from her Intelligence dice pools as long as she maintains contact with or proximity to the ward. Additionally, anyone seeing the ward becomes addled and lost unless she succeeds on a Wits + Investigation roll (difficulty 8). The Kiasyd is immune to his own wards. The glyphs last for a duration indicated by the number of successes on the ^Intelligence + Larceny^ roll:
+<table><tr><th>Successes</th><th>Duration</th></tr><tr><td>1 success</td><td>One hour</td></tr><tr><td>2 successes</td><td>One night</td></tr><tr><td>3 successes</td><td>One week</td></tr><tr><td>4 successes</td><td>One month</td></tr><tr><td>5 successes</td><td>One year</td></tr></table>

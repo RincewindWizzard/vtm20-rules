@@ -1,0 +1,6 @@
+---
+name: Ra’s Blessing
+---
+
+This ritual is difficult, but allows the vampire to accomplish the impossible - walking in sunlight, fully experiencing the day once more. Gaining Ra’s Blessing requires a month-long period of fasting and meditation, at the end of which the character might be granted the chance to spend a few precious hours in sunlight. Even this brief period, however, can bolster the character’s Humanity.
+_System_: After completing the month of contemplation, the character ritually washes herself and prepares to greet the dawn. The player spends 10 blood points and rolls ^Humanity^ (difficulty 9). Every success allows the character to withstand the sunlight as if she were mortal for a single hour. If the roll fails or botches, the character cannot attempt Ra’s Blessing for a decade. If the roll succeeds, though, the character can use the reaffirmation of seeing sunlight as a way to boost her Humanity and Virtues. For every hour spent under the sun, the Child can roll his ^Humanity^, or one of his Virtues, against a difficulty of 9. Success means that trait is raised by one, while failure or botching this roll means no gain.

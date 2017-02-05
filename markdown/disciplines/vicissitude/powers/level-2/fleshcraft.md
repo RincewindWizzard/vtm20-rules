@@ -1,0 +1,6 @@
+---
+name: Fleshcraft
+---
+
+This power is similar to Malleable Visage, above, but allows the vampire to perform drastic, grotesque alterations on other creatures. Tzimisce often use this power to transform their servitors into monstrous guards, the better to frighten foes. Only flesh (skin, muscle, fat, and cartilage, but not bone) may be transformed.
+_System_: After spending a blood point, the vampire must grapple the intended victim. The player of the Fleshcrafting vampire makes a successful ^Dexterity + Medicine^ roll (difficulty variable: 5 for a crude yank-and-tuck, up to 9 for precise transformations). A vampire who wishes to increase another’s Appearance Trait does so as described under Malleable Visage; reducing the Attribute is considerably easier (difficulty 5), though truly inspired disfigurement may dictate a higher difficulty. In either case, each success increases or reduces the Attribute by one. A vampire may use this power to move clumps of skin, fat, and muscle tissue, thus providing additional padding where needed. For each success scored on a ^Dexterity + Medicine^ roll (difficulty 8), the vampire may increase the subject’s soak dice pool by one, at the expense of either a point of Strength or a health level (vampire’s choice).

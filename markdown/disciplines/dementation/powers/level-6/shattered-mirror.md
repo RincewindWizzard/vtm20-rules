@@ -1,0 +1,7 @@
+---
+name: Shattered Mirror
+---
+
+Although Dementation’s low-level effects are primarily to initiate or promote insanity rather than to create it spontaneously, some of its more potent manifestations are not as subtle. The wielder of this fearsome power can transfer her own deranged mindset into the psyche of a hapless victim, spreading her own brand of insanity like a virus.
+_System_: The vampire must establish eye contact (p.152) with her intended victim to apply this power. The player then rolls ^Charisma + Subterfuge^ (difficulty equal to the target’s current Willpower points) resisted by the target’s Wits + Self-Control/Instinct (difficulty equal to the Dementation user’s current ^Willpower^ points). If the aggressor wins, the target gains all of her derangements and Mental Flaws for a period of time determined by the number of net successes the aggressor scored:
+<table><tr><th>Successes</th><th>Result</th></tr><tr><td>1 success</td><td>one hour</td></tr><tr><td>2 successes</td><td>one night</td></tr><tr><td>3 successes</td><td>one week</td></tr><tr><td>4 successes</td><td>one month</td></tr><tr><td>5 successes</td><td>six months</td></tr><tr><td>6+ successes</td><td>one year per success over 5</td></tr></table>

@@ -1,0 +1,20 @@
+---
+name: "The Way of Fire"
+---
+
+The ancient anathema of vampires, the element of fire offers the most powerful and dangerous tool available to koldun. The Way of Fire shares aspects with the Way of Earth, in that it focuses more on magma and fiery rock than pure, naked flame. Attribute: Manipulation
+
+#  Level 1
+<b>Fiery Courage</b><br>No vampire can master an element he fears, so this power dims that fear to a mere ember of its former intensity.<br><b>System</b>: Once learned, this power is permanent and requires no activation roll or blood. The koldun subtracts his rating in the Way of Fire from the difficulty of Courage rolls to resist Rötschreck from exposure or proximity to flame. This power does not aid in resisting the panic that accompanies sunlight or any other causes apart from actual fire. If this reduces the difficulty of a Courage roll below two, the koldun simply does not succumb to the Red Fear. Koldun never risk Rötschrek from fire and magma they conjure.
+
+# Level 2
+<b>Combust</b><br>The Cainite’s eyes flash vivid orange with sorcerous power as superheated air coils around the target. In moments, the target bursts into spontaneous flame.<br><b>System</b>: For every success on the activation roll, the target suffers one level of aggravated damage. This attack may be dodged, but not blocked, and can affect living (or unliving) beings at +2 difficulty. It is only possible to make one fiery attack per turn.
+
+# Level 3
+<b>Wall of Magma</b><br>The koldun raises his hand and the earth splits, spraying a wall of glowing magma 10 feet/3 meters high. Normally, this wall forms a 10-foot/3-meter radius circle around the vampire, although the sorcerer can raise other shapes with practice and skill.<br><b>System</b>: The wall of magma summoned with this power has a lifespan of two turns per success rolled. If the koldun wishes to release the magma along a shape other than a protective circle, increase the base difficulty by one. Characters cannot approach a wall of molten rock without a Courage roll (difficulty 8), and even then, the close blistering heat inflicts a level of aggravated damage. Actual contact with the lava increases the damage to three levels and raises the soak difficulty to 9, assuming any sort of soak is possible. The koldun takes no damage from his proximity to the summoned magma (although contact with it still damages him as normal).
+
+# Level 4
+<b>Heat Wave</b><br>The koldun acts as a conduit for steam geysers and channels a blast of desiccating air at a victim within line of sight. This fiery wind appears as a rippling heat wave enveloping the victim. Individuals slain with this gruesome power appear as withered, mummified husks.<br><b>System</b>: On a successful activation roll, the victim suffers five levels of lethal damage that may be soaked by beings capable of such. Vampire targets also lose five blood points, regardless of the damage inflicted.
+
+# Level 5
+<b>Volcanic Blast</b><br>At the final mastery of Way of Fire, a koldun commands lava to explode from the ground in a huge geyser. The molten rock spews across a wide swath before crashing to earth and flowing in all directions. Anything in the path of the molten rock burns, melts, or vaporizes within moments. The caster may direct the lava to erupt anywhere in his line of sight.<br><b>System</b>: This power costs one Willpower point in addition to a blood point. For every success on the activation roll, the initial lava burst lasts one turn. The rivers of burning liquid rock then flow sluggishly for twice this duration before suddenly cooling and hardening.<br>Even if an object survives the heat, it now lies trapped beneath the rock. Anything that makes contact with lava (including the koldun) suffers a minimum of three levels of aggravated damage. For objects that don’t have health levels, the Storyteller must decide how many turns they last before melting or erupting into their own inferno. A botch on this power opens the lava geyser under an unintended target, possibly the koldun himself.

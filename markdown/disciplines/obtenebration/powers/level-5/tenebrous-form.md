@@ -1,0 +1,7 @@
+---
+name: Tenebrous Form
+---
+
+At this level, the Kindred’s mastery of darkness is so extensive that she may physically become it. Upon activation of this power, the vampire becomes an inky, amoeboid patch of shadow. Vampires in this form are practically invulnerable and may slither through cracks and crevices. In addition, the shadow-vampire gains the ability to see in natural darkness.
+_System_: The transformation costs three blood points (which may need to occur over three turns, depending on the vampire’s Generation). The vampire is immune to physical attacks while in the tenebrous form (though she still takes aggravated damage from fire and sunlight), but may not herself physically attack. She may, however, envelop and ooze over others, affecting them in the same manner as a Shroud of Night, in addition to using mental Disciplines. Vampires in Tenebrous Form may even slither up walls and across ceilings or “drip” darkness upward - they have no mass and are thus unaffected by gravity. Rötschreck difficulties from fire and sunlight do increase by one for vampires in this form, as the light is even more painful to their shadowy bodies.
+Mortals (and others not used to such displays) who witness the vampire transform into unholy shadow require Courage rolls (difficulty 8) in order to avoid the debilitating terror described under Black Metamorphosis.

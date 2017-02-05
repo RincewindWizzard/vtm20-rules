@@ -1,0 +1,6 @@
+---
+name: Old Friend
+---
+
+Many elder Nosferatu have made reputations for omniscience with the secrets they learn through creative uses of this power. A variation of Mask of a Thousand Faces, Old Friend allows a vampire to probe a subject’s subconscious and take the semblance of the individual whom that victim trusts over anyone else. Someone using this power does not appear as someone who the victim is frightened of or awed by, but rather someone to whom the victim feels comfortable revealing intimate secrets. Old Friend doesn’t necessarily make its user appear as someone who is still among the living; a long-dead friend or relative is just as likely, and in such cases the subject remembers the encounter as a dream or a ghostly visitation.
+_System_: The player rolls ^Manipulation + Subterfuge^ (difficulty equal to the victim’s Perception + Alertness or Awareness, maximum 10). The more successes, the more convincing the impersonation. This power only affects one victim at a time; other observers see the vampire as she truly is, unless she also establishes a Mask of a Thousand Faces in addition to using Old Friend.

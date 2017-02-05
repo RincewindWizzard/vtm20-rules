@@ -1,0 +1,6 @@
+---
+name: False Resonance
+---
+
+Illusions of living or unliving beings are all well and good until someone decides to read the illusion’s mind or its aura. The automatic failure to perceive any sense of the target’s thoughts or emotions will usually be passed off as bad luck, lack of concentration, or whatever reason any Kindred might construct to explain why he didn’t succeed in gleaning information through supernatural means. A vampire can use False Resonance to overlay auras and thoughts on illusions, as well as leave a trace that other emotionally resonant powers can detect later.
+_System_: This power automatically applies to any other use of Chimerstry as the user wishes. In effect, any attempt to use Auspex, the Dementation power Eyes of Chaos, or similar sensory powers that generates five or fewer successes will detect an aura, thoughts, Demeanor or whatever the power would normally detect. Thoughts won’t be exceptionally complex, and will relate to whatever is going on around the illusion in a mundane and simplistic way. Auras will consist of colors related to specific emotions (anger, sadness, hatred, love, and happiness) and will not show much complexity beyond that. Spirit’s Touch can pick up the same emotional resonance until the next sunrise.

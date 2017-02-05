@@ -1,0 +1,6 @@
+---
+Name: "Penitent"
+---
+
+The Penitent exists to atone for the grave sin she commits simply by being who she is. Penitents have either low self-esteem or traumatic past experiences, and feel compelled to “make up” for inflicting themselves upon the world. Penitent Archetypes are not always religious in outlook; some truly want to scourge the world of the grief they bring to it. Repentant sinners, persons with low self-esteem, and remorseful criminals are examples of the Penitent Archetype. Penitent Kindred include those who scourge themselves of the Beast like medieval monks, vampires who stand up for the rights of mortals, and those who subsist entirely on the vitae of animals.
+ - Regain a point of Willpower whenever you feel that you have achieved absolution for a given grievance. This redemption should be of the same magnitude as the transgression - the greater the crime, the greater the penance. The Storyteller is the ultimate arbiter of what constitutes a reasonable act of reparation.

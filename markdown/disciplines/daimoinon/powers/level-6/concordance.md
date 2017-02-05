@@ -1,0 +1,6 @@
+---
+name: Concordance
+---
+
+The Baali makes a Devil’s bargain and takes the unholy nature of his masters into his own being. This warps his body both to his detriment and benefit. A truly dedicated Demon might make numerous such pacts, growing more grotesque and more powerful each time.
+_System_: The most typical manifestation of this power incorporates immunity to the damaging effects of fire, though other equivalently-powered assets may be available at the Storyteller’s option. Most of these tributes take the form of left-handed “gifts” with unforeseen consequences (a tell-tale bronze tint to flame-resistant flesh, a vestigial set of wings, visible talons or horns that cannot be concealed, etc.). This Discipline may be purchased more than once at greater cost to body and soul. (The current shaitan is said to have been so gnarled and twisted by the Masters as to be no longer even remotely mistakable for human). Note that three of the banes particular to the Baali - piety, vulnerability to sunlight, and dependency on blood for sustenance - may not be overcome by this Discipline under any circumstances. In the end, it is up to the Storyteller’s discretion what the Baali can or cannot withstand.

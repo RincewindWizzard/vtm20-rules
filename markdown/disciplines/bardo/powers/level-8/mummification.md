@@ -1,0 +1,6 @@
+---
+name: Mummification
+---
+
+The Children of Osiris have an uneasy relationship with destroying other vampires. They would prefer not to do so, but some Kindred are too evil to be allowed to exist. For the vampires that straddle the line - that are wicked, but retain a spark of Humanity - the Children sometimes use Mummification. This long ritual allows a vampire to be put into torpor for as long as the Child wishes. The target can attempt to struggle free, but only once per century. Once the vampire is mummified, the Children usually seal her up in a deep tomb, where (hopefully) she will remain undisturbed.
+_System_: The target must be immobilized, ritually bound in strips of fabric, and prepared with incense and special herbs. The player then rolls ^Willpower^ in a contested action against the target’s Willpower (both difficulty 8). If the Child wins, the target enters torpor. If the victim wins, he remains awake and the ritual cannot be completed for another night (meaning that resistance is usually temporary). The target can also attempt to shake the spell free once per century, with a Willpower roll (difficulty 9). Ghouls can also be mummified, but they get no chance to escape.

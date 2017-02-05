@@ -1,0 +1,6 @@
+---
+name: Ashes to Ashes
+---
+
+The character collapses into a thick, sticky white powder. While in this form, the character cannot move and is only dimly aware of her surroundings, but is immune to fire and sunlight (meaning that this power is an effective escape in some situations). The character must take care, though - if the ashes are scattered, she might never be able to reform.
+_System_: The transformation to ashes requires one turn and the expenditure of two blood points. While the character is in ash form, the player must make a ^Perception + Alertness^ roll (difficulty 9) for any scene in which she wishes her character to be aware of her surroundings. Reforming from the heap of ashes takes one turn. If the character is in a confined space (such as an urn), she explodes from it in a suitably dramatic manner as she brings herself back to full size. If a Samedi is scattered while in this form, one health level and one blood point are lost for each tenth (roughly) of the character that has been dissipated. Five blood points are required to heal each health level lost in this manner. At the Storyteller’s discretion, the Samedi may be missing limbs or vital organs (though never the head or the heart) until the missing health levels are healed.

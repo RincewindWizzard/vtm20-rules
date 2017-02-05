@@ -1,0 +1,6 @@
+---
+name: Conflagration
+---
+
+Not all of the Baali’s powers are designed for manipulation and subtlety. The Demons can also call up the fire from the realms of their infernal patrons, hurling it at their enemies in exultation of the Outer Dark. This fire spreads and burns normally, but at the moment of creation it is black and cold, as though drawn from a place where terrestrial physics do not apply.
+_System_: The player spends a blood point. This creates a bolt of black flame that inflicts one die of aggravated damage; more blood points may be spent to increase the size and damage of the flame. Such fires are fleeting and dissipate at the end of the turn, unless the Baali continues to spend blood points on Conflagration over several turns, gradually creating a larger flame. The player also rolls ^Dexterity + Occult^ (difficulty 6) to hit his target, who may dodge as normal. Vampires confronted with this black fire make Rötschreck tests as if confronted with a similar quantity of normal flame.

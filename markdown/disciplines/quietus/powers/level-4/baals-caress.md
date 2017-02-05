@@ -1,0 +1,6 @@
+---
+name: Baal’s Caress
+---
+
+The penultimate use of blood as a weapon (short of diablerie itself), Baal’s Caress allows the Kindred to transmute her blood into a virulent ichor that destroys any living or undead flesh it touches. In nights of yore, when Assamites led the charges of Saracen legions, the Assassins were often seen licking their blades, slicing open their tongues and lubricating their weapons with this foul secretion. Baal’s Caress may be used to augment any bladed weapon; everything from poisoned knives and swords to tainted fingernails and claws has been reported.
+_System_: Baal’s Caress does not increase the damage done by a given weapon, but that weapon inflicts aggravated damage rather than normal. No roll is necessary to activate this power, but one blood point is consumed per hit. For example, if a Cainite poisons his knife and strikes his opponent (even if he inflicts no damage), one blood point’s worth of lubrication disappears. For this reason, many vampires choose to coat their weapons with a significant quantity of blood. If the vampire misses, no tainted blood is consumed.

@@ -1,0 +1,6 @@
+---
+name: Skin of the Chameleon
+---
+
+This basic power has saved countless Gargoyles breaching the Masquerade - and has allowed just as many to ambush unsuspecting intruders. When Skin of the Chameleon is in effect, the Gargoyle’s skin takes on the color and texture of the surrounding environment. This coloration changes reflexively as long as the Gargoyle maintains a walking pace or slower. More rapid movement causes the Gargoyle’s appearance to blur, negating the camouflaging effect. If this power is used while the Gargoyle is in flight, his skin becomes a reasonable facsimile of the night sky (though it will not shift to mimic nearby skyscrapers or star patterns, and a black silhouette against a brightly lit skyline is likely to be noticed).
+_System_: The player spends one blood point. For the rest of the scene, the Gargoyle’s Stealth dice pool is increased by five. This power is subject to the limitations described above. Any ground movement faster than a walk negates this power’s effect, as does flight (at the Storyteller’s discretion).

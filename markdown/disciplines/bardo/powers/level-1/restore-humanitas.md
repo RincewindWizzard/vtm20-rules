@@ -1,0 +1,6 @@
+---
+name: Restore Humanitas
+---
+
+The first thing that the Children of Osiris are taught is that Humanity does not have to be an inexorable slide into depravity. Instead, it is more akin to a climb up an extremely steep hill. The vampire is going to lose some ground, but with perseverance and strength, he can regain it.
+_System_: When the vampire loses a dot of Humanity, he can attempt to regain it without spending experience points by using this power. The Child must use this power within a week of losing the Humanity, and must not have lost any more Humanity since the initial loss (that is, if the character falls from Humanity 8 to Humanity 7, and then falls to Humanity 6 before using this power, Restore Humanitas can only be used to recover Humanity 7). The character meditates for several hours, and spends all of the blood points currently in his body. The player then rolls ^Conscience^ (difficulty equal to the level of Humanity being regained). If the roll succeeds, the character regains the dot of Humanity and (if applicable) the dot of Conscience lost to a botched degeneration roll. If the character gained a derangement, it fades within a week of using Restore Humanitas.

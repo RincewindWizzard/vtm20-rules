@@ -1,0 +1,6 @@
+---
+name: Earthshock
+---
+
+According to some pundits, Potence is merely the art of hitting something very hard. But what do you do when your target is too far away to hit directly? The answer is, if you’re sufficiently talented with the Discipline, to employ Earthshock. On its simplest level, Earthshock is the ability to hit the ground at point A, and subsequently have the force of the blow emerge from the ground at point B.
+_System_: The use of Earthshock requires the expenditure of two blood points, as well as a normal ^Dexterity + Brawl^ roll. The vampire punches or stamps on the ground, and, if the attack is a success, the force of the blow emerges from the ground as a geyser of stone and earth directly underneath the target. The attack can be dodged at a +2 difficulty. Earthshock’s range is 10 feet or three meters for every level of Potence the vampire has, up to the limits of visibility. A failure on the attack roll means that the strike goes errant and is liable to explode anywhere within range; a botch means that the vampire pulverizes the ground beneath him and may well bury himself in the process.

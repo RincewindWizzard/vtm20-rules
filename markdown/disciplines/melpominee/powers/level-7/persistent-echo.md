@@ -1,0 +1,9 @@
+---
+name: Persistent Echo
+---
+
+The Daughter can sing, speak, or even use a Melpominee power and leave the effect hanging in the air, waiting for someone to come along and hear it. The character can control who can trigger her latent song, meaning that combined with Shattering Crescendo or Siren’s Beckoning, this power can be used as a trap.
+_System_: The player rolls ^Stamina + Performance^ (difficulty 8) and spends a blood point. Each success yields one turn of speech that may be left to be heard later. If the player wishes to time-delay another Melpominee power, the roll for that power must be made at +1 difficulty. The echo stays suspended for a maximum number of nights equal to twice the vampire’s ^Stamina + Performance^ before fading.
+The Kindred may choose to make the echo audible to anyone who stands in her position for the duration of the power - in effect, an endlessly looped mystic recording. Conversely, she may choose for it to fade away once it is heard for the first time. She may also choose to leave it dormant until activated by the presence of a specific individual with whom she is familiar. If the echo is made a one-time-only effect, all traces of the power disappear once the vampire’s words echo to the intended recipient.
+If a character uses Heightened Senses in an area where an “unactivated” echo exists, he will hear a faint murmur. Three successes on a ^Perception + Occult^ roll (difficulty 8) are necessary to hear the message, and a botch on this roll will deafen the listener for the rest of the night.
+Multiple Daughters may use this Discipline in concert.

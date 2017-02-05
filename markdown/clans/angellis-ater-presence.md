@@ -1,0 +1,8 @@
+---
+Name: "Angellis Ater (Presence)"
+disciplines: ['daimoinon', 'dominate', 'presence']
+weakness: "Cast no reflection"
+weakness_description: "The Angellis Ater have the same weakness as other Lasombra (p. 59) - they do not cast reflections."
+---
+
+<p>The Angellis Ater are an odd bloodline, one that crosses boundaries between Baali and Lasombra. The so-called “black angels” believe that vampires are the instrument of Satan, and they worship sin and the darkness of the soul. Their Lasombra blood lets them reach into the blackness, pull it forth and manipulate it, and the black angels become dependent upon and addicted to use of the Obtenebration Discipline over time.</p><p>The bloodline has been around since at least the Middle Ages, descended in part from a powerful Baali called Azaneal. This monstrous vampire acted as a leader within the Baali line for a time, and twisted the orthodoxy of some Kindred enough to create a kind of heresy, one that was all too attractive to the Lasombra. The Clan of Shadows’ power base traditionally included the Catholic Church, and over time the Angellis Ater made at least some inroad with these pious (or pious-seeming) Lasombra. How much influence in the Church they were able to wield is not known, but they did survive the Inquisition. Angellis Ater are rare in modern nights, but they do exist.</p><p><b>Nickname:</b> Black Angels</p><p><b>Disciplines:</b> Daimoinon, Dominate, and one of Potence, Presence, or Obtenebration</p><p><b>Weakness:</b> The Angellis Ater have the same weakness as other Lasombra (p. 59) — they do not cast reflections.</p><p class=ttlQuote><b>Quote:</b> <i>We reach into the shadows, reach into hell. We pull out what you find there, and paint the world with it.</i></p>

@@ -1,0 +1,6 @@
+---
+name: Fear of the Void Below
+---
+
+Once the Baali has mastered reading a subject’s darkest secrets, he can reach into the victim’s mind and twist what he finds there. The shock of feeling one’s most deeply held beliefs and darkest fears manipulated can send the victim into catatonia or fits of panic.
+_System_: The Baali must first employ Sense the Sin (above) or use some other method to discern the tragic flaw of the target. She must then speak to the target, playing upon his inadequacies and the inescapable consequences of his shortcomings. A successful ^Wits + Intimidation^ roll (difficulty of the subject’s Courage + 4) drives the victim into fits of terror (one success), mindless panic-borne flight similar to Rötschreck (two successes), or even unconsciousness (three or more successes). All effects last for the remainder of the scene. Kindred targets may resist with a Courage roll (difficulty equal to the Baali’s ^Willpower^) - they are accustomed to dealing with their Beasts. If the Kindred target garners more successes than the Baali did on her original roll, he resists the power completely.

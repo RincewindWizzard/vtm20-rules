@@ -1,0 +1,6 @@
+---
+name: Inscribe the Forgotten Names
+---
+
+When the Lhiannan reaches this level of Ogham, she reverses the relationship between herself and her spirit-shard and can dominate and extract information from it. The Lhiannan’s ancient spirit knows the names of many mythical beings, and it can be bludgeoned into giving the Lhiannan one of those names so that she may invoke such a creature. These beings are dangerous, and not to be trifed with. Many are on a par with Methuselahs. Inscribe the Forgotten Names allows its wielder to communicate with the being she summons, but it does not give her domination or control over that creature. She must appease it in whatever manner she can, and hope that it does not take offense at being called up.
+_System_: The player spends three blood points. The Lhiannan must spend one half hour undisturbed as blood oozes from her skin to sate the spirit-shard’s hunger. At the end of this time, the player rolls ^Intelligence + Occult^ (difficulty 9, or 8 if the character has summoned this particular being before). If the roll succeeds, a powerful creature arrives in the immediate vicinity before the end of the current scene. The Storyteller is free to assign game statistics to any creature summoned. Such creatures have their own desires and demands, and many do not take kindly to being called.

@@ -1,0 +1,6 @@
+---
+name: Anesthetic Touch (Obeah)
+---
+
+The vampire can ease a target’s pain or place him into a deep, soothing sleep with nothing but a touch. This power is intended to heal the pain or succor the mind of willing targets, but the character can, with some effort, employ the power against someone who does not wish it.
+_System_: If the subject is willing to undergo this process, the player spends a blood point and makes a ^Willpower^ roll (difficulty 6) to block the subject’s pain. This allows the subject to ignore all wound penalties for one turn per success. A second application of this power may be made once the first one has expired, at the cost of another blood point and another Willpower roll. If the subject is unwilling for some reason, the player must make a contested ^Willpower^ roll against the subject (difficulty 8). To put a mortal to sleep, the same system applies. The mortal sleeps for five to 10 hours - whatever his normal sleep cycle is - and regains one temporary Willpower point upon awakening. He sleeps peacefully and does not suffer nightmares or the effects of any derangements while asleep. He may be awakened normally (or violently). Kindred, including the Salubri herself, are unaffected by this power - their corpse-like bodies are too tied to death.

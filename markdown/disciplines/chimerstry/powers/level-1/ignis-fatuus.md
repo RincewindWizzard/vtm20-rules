@@ -1,0 +1,6 @@
+---
+name: Ignis Fatuus
+---
+
+The vampire may conjure a minor, static mirage that confounds one sense. For instance, he may evoke a sulfurous stench, the appearance of stigmata, or the shatter of broken glass. Note that though tactile illusions can be felt, they have no real substance; an invisible but tactile wall cannot confine anyone, and invisible razor-wire causes no real damage. Similarly, the vampire must know the characteristics of what he’s creating. While it’s easy enough to estimate what a knife wound might look like, falsifying a person’s voice or a photograph of a childhood home requires knowledge of the details.
+_System_: The player spends a point of Willpower for the vampire to create this illusion. The volume of smells, ambient lighting, smoke clouds, and the like are limited to roughly 20 cubic feet (half a cubic meter) per dot the vampire has in Chimerstry. The illusion lasts until the vampire leaves its vicinity (such as stepping out of the room) or until another person sees through it somehow. The Cainite may also end the illusion at any time with no effort.

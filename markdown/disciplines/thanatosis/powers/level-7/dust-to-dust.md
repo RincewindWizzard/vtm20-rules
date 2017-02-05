@@ -1,0 +1,6 @@
+---
+name: Dust to Dust
+---
+
+With this power, the Samedi retains cohesion, awareness, and mobility while in ash form. While not as impressive as the Tzimisce Horrid Form, a clever Stiff can find many tactical uses for such a power.
+_System_: While a pile of ash, the Samedi remains fully conscious and may use any Discipline powers that being a pile of dust would permit (for instance, Majesty will make the pile of dust very impressive, and no maid in her right mind would dare sweep it up). The character cannot be blown apart by high winds, and any deliberate attempt to separate the pile of ash may be resisted with a die pool equaling the character’s combined Strength, Stamina, Potence, and Fortitude. The character may move voluntarily at a speed no higher than that at which a pile of normal dust would be blown by the wind, even if he is indoors. He does not have to move in the direction of the prevailing air currents, and may “flatten” himself by spreading his ashes thinly so as to slip under doors and through cracks. This power functions like Ashes to Ashes in all other respects.

@@ -1,0 +1,7 @@
+---
+name: Suspension of Disbelief
+---
+
+A Ravnos with this power can imbue her Chimerstry with a sense of reality that makes it easier for viewers to believe in the illusion. No matter how strange or surreal the illusion is, an onlooker will accept it as real. If the illusion is wildly unrealistic (fire-breathing dragons, a pack of aliens), once it is no longer in his sight, the observer will question what he saw and eventually deny the event ever happened. A vampire can also use this power to make something appear unbelievable, whether it’s real or not. In this case, observers will write off what they’re seeing as some kind of trick or hallucination.
+_System_: The player rolls ^Manipulation + Subterfuge^ (difficulty 7). The number of successes determines how many witnesses are affected. If the player uses the power to make something look unbelievable, Auspex will show the thing in question to be an illusion unless the Auspex rating is not high enough to penetrate the Kindred’s Chimerstry.
+<table><tr><th>Successes</th><th>Result</th></tr><tr><td>1 success</td><td>Five people</td></tr><tr><td>2 successes</td><td>10 people</td></tr><tr><td>3 successes</td><td>25 people</td></tr><tr><td>4 successes</td><td>50 people</td></tr><tr><td>5 successes</td><td>Everyone who can see it</td></tr></table>

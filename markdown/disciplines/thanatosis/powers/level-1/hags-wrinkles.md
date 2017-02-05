@@ -1,0 +1,6 @@
+---
+name: Hag’s Wrinkles
+---
+
+Perpetual rot makes the character’s flesh malleable. The Samedi can open large folds in her flesh, storing objects in them like a kangaroo’s pouch. She can also massage the slimy flaps of fatty tissue to alter her appearance slightly (though this does nothing for the smell). Other Kindred can learn this Discipline, of course, but if they do not possess the “advantage” of having skin that already falls in droops and folds, large wrinkles and bulges may be visible.
+_System_: This power requires one turn to shape the wrinkles and the expenditure of a blood point. If the power is used to distort a character’s features, the Samedi player must roll ^Stamina + Subterfuge^ (difficulty 8). Success raises the difficulty to visually identify the character by one and lasts for one hour per success rolled. If the character is attempting to hide a small object (a wallet, a letter, a small pistol), the roll and duration are the same, but all rolls made to see if the object is detected (for example, a pat-down search or a security guard’s visual inspection) are at +2 difficulty.

@@ -1,0 +1,6 @@
+---
+Name: "Rogue"
+---
+
+Only one thing matters to the Rogue: herself. To each his own, and if others cannot protect their claims, they have no right to them. The Rogue is not necessarily a thug or bully, however. She simply refuses to succumb to the whims of others. Rogues almost universally possess a sense of self-sufficiency. They have their own best interests in mind at all times. Prostitutes, capitalists and criminals all embody the Rogue Archetype. Kindred Rogues include diablerists, Autarkis, and a Primogen who puts his Clan’s opportunities before the supremacy of the Kindred as a whole.
+ - Regain a point of Willpower when your self-centered disposition leads you to profit, materially or otherwise. At the Storyteller’s discretion, accumulating gain without exposing your own weaknesses may let you regain two points of Willpower. As well, you may regain a point of Willpower when your efforts benefit the group to which you belong when that benefit comes at the expense of another group.

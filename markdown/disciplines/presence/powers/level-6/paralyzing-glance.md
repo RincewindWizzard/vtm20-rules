@@ -1,0 +1,7 @@
+---
+name: Paralyzing Glance
+---
+
+Some elders have honed their mastery of Dread Gaze to such a degree that they are said to be able to paralyze with a look. The power’s name is something of a misnomer, as victims of this power are not precisely paralyzed in a physical sense, but rather frozen with sheer terror.
+_System_: The character must make eye contact (p.152) with her intended victim. The player then rolls ^Manipulation + Intimidation^ (difficulty equal to the target’s current Willpower points). Success renders the victim so terrified that he falls into a whimpering, catatonic state, unable to take any actions except curling into a fetal position and gibbering incoherently. The condition lasts for a length of time determined by the number of successes rolled. If the victim’s life is directly threatened (by assault, impending sunrise, etc.), the poor wretch may attempt to break out of his paralysis with a Courage roll (difficulty equal to the character’s Intimidation + 3). One success ends the paralysis. A botch sends the victim into a continuous state of Rötschreck for the rest of the night.
+<table><tr><th>Successes</th><th>Result</th></tr><tr><td>1 success</td><td>Three turns</td></tr><tr><td>2 successes</td><td>Five minutes</td></tr><tr><td>3 successes</td><td>Remainder of the scene</td></tr><tr><td>4 successes</td><td>One hour</td></tr><tr><td>5 successes</td><td>Rest of the night</td></tr><tr><td>6+ successes</td><td>A week (or more, at Storyteller discretion)</td></tr></table>

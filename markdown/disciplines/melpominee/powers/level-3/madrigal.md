@@ -1,0 +1,8 @@
+---
+name: Madrigal
+---
+
+Music has the power to sway the listener, engendering specific emotions through artful lyrics, pounding crescendo, or haunting melody. The Daughters of Cacophony can tap into music’s power, forcing listeners to feel whatever they wish. The emotion becomes so powerful that the listener must act, though what a listener does isn’t something the Siren can directly control.
+_System_: The player rolls ^Charisma + Performance^ (difficulty 7). Each success instills the chosen emotion in a fifth of the Kindred’s audience (more than five successes have no additional effect). The Storyteller decides precisely which members of the audience are affected. Characters may resist this power for the duration of the scene with the expenditure of a Willpower point, but only if they have reason to believe that they are being controlled by outside individuals. The song the vampire sings must also reflect the emotion she wishes to engender - no one’s going to mob the concert security no matter how well she sings “High Hopes”, but they might if she performs “I Predict a Riot”.
+Affected individuals should act in accordance with their Natures - enraged Conformists would join a riot but not start one, aroused Bravos may force their attentions on the object of their desire, and jealous Directors may send cronies after their rivals.
+Multiple Daughters may use this Discipline in concert.

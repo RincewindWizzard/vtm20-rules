@@ -1,0 +1,6 @@
+---
+Name: "Rebel"
+---
+
+The Rebel is a malcontent, never satisfied with the status quo or the system as it is. He hates the very idea of authority and does everything in his power to challenge and undermine it. Perhaps the Rebel truly believes in his ideals, but it is just as likely that he bears authority figures some ill will over a “wrong” done to him in the past. A Rebel may hate institutions categorically, or she may be consumed with opposition toward a single particular authority. Teenagers, insurrectionists, and non-conformists all exemplify the Rebel Archetype. Rebel Kindred certainly include the Sabbat, Anarchs, and temperamental Brujah, but also have room for Tremere who chafe at the rigid Clan hierarchy or neonates who deplore their sires.
+ - Regain a point of Willpower whenever your actions adversely affect your chosen opposition. Rebels may oppose the government, the Church, a vampire Prince, or any other holder of authority. The player should choose whom or what his character rebels against when he adopts this Archetype. Storytellers should take rebellion against “all authority” with a grain of salt, and apply the Willpower reward for such a broad concept to only greater and greater actions of insurgency.

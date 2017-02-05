@@ -1,0 +1,6 @@
+---
+name: Boon of Anubis
+---
+
+The vampire can protect a mortal from Embrace, leaving instructions for Anubis, the judge of the dead, not to take this particular mortal to his scales. If the mortal is Embraced while under the power of this Discipline, she simply sleeps for a full night and day, and awakens aching and sick, but unharmed. In order to enact this power, the Child of Osiris must kiss the mortal, usually on the forehead.
+_System_: The vampire spends a point of Willpower and rolls ^Humanity^ (difficulty 6). If the roll succeeds, the target is immune to the Embrace for a number of months equal to the successes rolled. The player can spend a dot of Willpower to make the effect permanent. Note that this Discipline does not protect against any other form of death than the Embrace. If a vampire drains the unfortunate victim dry and then shoots her in the head, she dies just the same. However, the difficulty to avoid degeneration when killing or harming someone under protection of this power is increased by three.

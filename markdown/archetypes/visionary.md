@@ -1,0 +1,6 @@
+---
+Name: "Visionary"
+---
+
+The Visionary is strong enough to look beyond the mundane and perceive the truly wondrous. Visionaries test accepted societal limits, and seek what few others have the courage to imagine. The Visionary rarely finds satisfaction in what society has to offer; she prefers to encourage society to offer what it could instead of what it does. Typically, society responds poorly to Visionaries, though it is they who are responsible for bringing about progress and change. Philosophers, inventors and the most inspired artists often have Visionary Natures. Kindred Visionaries may want to plunge all mortals into vampiric thrall, they may adapt technologies that other, more static Kindred fear or overlook, or they may have a “better way” to coexist with other vampires than all of this Prince-and-Regent nonsense.
+ - Regain a point of Willpower each time you are able to convince others to have faith in your dreams and follow the course of action dictated by your vision. Note that gaining support is the key to a Visionary regaining Willpower. Success need not come to a Visionary, at least not with every step in changing the structures in question. Her greatest successes may indeed come after her Final Death.

@@ -1,0 +1,6 @@
+---
+name: Conceal
+---
+
+The vampire may mask an inanimate object up to the size of a house (Obfuscate cannot be used to disguise inanimate objects without the use of this power). If the object is hidden, so are all of its contents. While Conceal is in effect, passersby walk around the concealed object as if it were still visible, but refuse to acknowledge that they are making any kind of detour.
+_System_: In order to activate this power, a character must be within about 30 feet (approximately 10 meters) of the object to be concealed and the item must hold some personal significance for him. The Conceal power functions as Unseen Presence for purposes of detection, as well as the duration and durability of the disguise. Conceal can be used on a vehicle in which the character is traveling. In this instance, traffic patterns seem to flow around the vehicle, and accidents are actually less likely as other drivers subconsciously maneuver away from the concealed auto. A police radar gun still registers a speeding car masked in this fashion, but the officer behind the gun is disinclined to make a traffic stop of the phantom blip. Using Conceal on aircraft is problematic, as the power’s range generally doesn’t extend far enough to cover air traffic controllers and the like.

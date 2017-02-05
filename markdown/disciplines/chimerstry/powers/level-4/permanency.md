@@ -1,0 +1,6 @@
+---
+name: Permanency
+---
+
+This power, also used in conjunction with Ignis Fatuus or Fata Morgana, allows a mirage to persist even when the vampire cannot see it. In this way, Ravnos often cloak their temporary havens in false trappings of luxury, or ward off trespassers with illusory guard dogs.
+_System_: The vampire need only spend a blood point, and the illusion becomes permanent until dissolved (including “programmed” illusions like those created by Apparition).

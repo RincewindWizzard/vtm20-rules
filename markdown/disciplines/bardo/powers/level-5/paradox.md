@@ -1,0 +1,6 @@
+---
+name: Paradox
+---
+
+The Child utters a phrase or a riddle that lays bare the truth of the universe to a listener. That truth - the perspective of that one listener’s importance weighed against the whole of creation - is enough to immobilize the target for a  short while. Although this experience would seem to be disheartening, after the fact the targets are loath to harm the Child. Whether that’s because of a new-found appreciation for one’s place in the world, or out of fear that the vampire will reveal the paradox again, no one really knows.
+_System_: The vampire speaks the phrase, and the player spends a point of Willpower and rolls ^Manipulation + Occult^ (difficulty equal to the listener’s current Willpower). If multiple listeners are present, the player rolls against the highest difficulty. If the roll is successful, the listener(s) is immobilized for the scene as he contemplates what he has heard. Striking the victim snaps him out of it. At the end of the scene, the paradox is gone, and the target can’t ever quite explain it. He does, however, suffer a permanent +1 difficulty to harm or act against the Child of Osiris.

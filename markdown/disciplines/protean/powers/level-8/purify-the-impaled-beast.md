@@ -1,0 +1,6 @@
+---
+name: Purify the Impaled Beast
+---
+
+Camarilla records indicate that a disproportionately small number of Gangrel elders were killed by mortals and Anarchs during the Inquisition and the Anarch Revolt. This power is one of the primary reasons for the survival of these Kindred. An elder with this Protean power can expel foreign objects from her body with great force, even excising stakes that transfix her heart.
+_System_: The player spends three blood points and rolls ^Willpower^ (difficulty 6, or 8 if the vampire is paralyzed by an object impaling her heart). One success is sufficient to remove all foreign objects and substances from the character’s body. Dirt, bullets, and even stakes through the heart are instantly and violently removed. The larger the object, the farther away it is hurled by this power. Objects expelled thus are considered to have an attack dice pool of three for any bystanders, and to have a dice pool of one to four (depending on size) for damage. If the character wishes to leave an object in his body (such as a prosthetic limb) or partially in (expelling a stake from his heart but leaving it sticking out of his breastbone as a ruse), the player must also spend a Willpower point when activating this power.

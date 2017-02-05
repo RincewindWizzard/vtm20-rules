@@ -1,0 +1,7 @@
+---
+name: Withering
+---
+
+The Stiff can shrivel and render useless an opponent’s limb. This power works on Kindred as well as mortals. Kindred, of course, are horrified by the power, as they tend to think of their bodies as immortal and invulnerable to such ravages.
+_System_: The Samedi must touch the limb he intends to shrivel. The player spends a Willpower point and rolls ^Manipulation + Medicine^ (difficulty equal to the victim’s Stamina + Fortitude). Three successes are required for this power to shrink a limb. With one or two successes, the victim takes one health level of bashing damage, which may be soaked normally, but is otherwise unaffected (If the Withering attempt is successful, the subject suffers no health level of damage, but rather the withering of the limb itself).
+The effects of Withering fade after one night if a vampire or other supernatural creature is the victim, but mortals (including mages) are permanently afflicted unless some type of supernatural healing is used. If this power is used on an arm or leg, the limb instantly becomes useless. If this power is used on an opponent’s head, mortal victims die instantly. Kindred lose two points from all Mental Attributes while their heads are shrunken and are unable to use any Disciplines except Celerity, Fortitude, and Potence. Multiple uses of this power on the same appendage have no additional effect.

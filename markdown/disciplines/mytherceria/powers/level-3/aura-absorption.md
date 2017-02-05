@@ -1,0 +1,6 @@
+---
+name: Aura Absorption
+---
+
+The Kiasyd is capable of seeing images of events and emotions past by touching an object or an area. However, unlike the Auspex Power The Spirit’s Touch, this power absorbs the images, making them harder for other beings with similar powers to access. Anyone attempting to use this power, Spirit’s Touch, or a similar ability to see what the Kiasyd has seen finds that the images are hard to hold, slipping through his mind’s eye like minnows through a stream.
+_System_: The player must make a ^Perception + Empathy^ roll. The difficulty is determined by the Storyteller based on the age of the impressions and the mental and spiritual strength of the person who left them. The number of successes determines the amount of information gained, both in terms of images of the scene when the object was being held or touched, and the nature of the person who was holding the object. One scene-type image and one aspect of the person’s identity (Nature, Demeanor, aura, name, sex, or age) becomes clear for each success the player garners on the roll. Anyone attempting to use this power or The Spirit’s Touch on the same object subsequently must accumulate more successes than the Kiasyd did to get any impression at all. The first Kiasyd’s successes subtract from the number of successes scored by anyone trying to read the object thereafter.
