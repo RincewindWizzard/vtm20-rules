@@ -3,6 +3,7 @@ name: "Path of Humanity"
 nickname:  "None"
 virtues:   "Conscience and Self-Control"
 bearing:   "All Social rolls"
+sins: None
 ---
 
 # Beliefs
@@ -28,6 +29,3 @@ Abilities
 
 # Preferred Disciplines
 PrefDisc
-
-# Sins
-Sins
