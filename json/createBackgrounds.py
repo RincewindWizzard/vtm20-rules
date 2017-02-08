@@ -11,25 +11,20 @@ Name: "{}"
 ---
 
 {}"""
+from collections import namedtuple
+Background = namedtuple('Background', ['name', 'levels', 'description'])
 
+backgrounds = []
 
+print("[")
 with open('VtM20_Lookup_Backgrounds.json', 'r') as f:
-  bgs = json.load(f)
-  for bg in bgs:
-    slug = slugify(bg['Name'])
-    path = slug+'.md'
-
-    levels = ''    
+  for bg in json.load(f):
+    levels = []   
     for i in range(1, 10):
       level = 'Level{}'.format(i)
       if bg[level]:
-        levels += '{}: "{}"\n'.format(level, bg[level])
+        levels.append("'{}'".format(bg[level]))
 
-    with open(path, 'w') as md:
-      md.write(frontmatter.format(
-        bg['Name'],
-        levels,
-        to_md(bg['Descr'])
-      ))
-     
-  
+    #backgrounds.append(Background(bg['Name'], levels, to_md(bg['Descr'])))
+    print('  Background(\n    name = "{}",\n    levels = [\n      {}\n    ],\n    description = """{}"""\n  ),'.format(bg['Name'], ',\n      '.join(levels), to_md(bg['Descr'])))
+

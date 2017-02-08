@@ -2,6 +2,9 @@
 import unittest
 import vampire
 from vampire import Vampire
+from abilities import abilities, Ability
+from disciplines import disciplines
+from backgrounds import backgrounds
 
 class TestVampire(unittest.TestCase):
   def test_prop(self):
@@ -71,22 +74,39 @@ class TestVampire(unittest.TestCase):
   def test_abilities(self):
     v = Vampire()
     value = 3
-    v.abilities.alertness = value
-    self.assertEqual(v.abilities.alertness, value)
-    self.assertEqual(v.abilities.alertness, v.abilities.talents.alertness)
-    self.assertEqual(list(v.abilities), [(vampire.abilities[0], value)])
-    self.assertEqual(list(v.abilities.talents), [(vampire.abilities[0], value)])
+    alertness = abilities['Alertness']
 
-    v.abilities.knowledges.politics = 3
-    self.assertEqual(v.abilities.politics, v.abilities.knowledges.politics)
+    v.abilities[alertness] = value
+    self.assertEqual(v.abilities[alertness], value)
 
-    for ability in vampire.abilities:
+    for ability in abilities.values():
       v.abilities[ability] = 1
 
-    def foo(): v.abilities.politics = 6
+    def foo(): v.abilities[alertness] = 6
     self.assertRaises(ValueError, foo)
 
-    
+    def foo(): v.abilities[Ability("foo", '', [], '')] = 1
+    self.assertRaises(ValueError, foo)
+
+  def test_disciplines(self):
+    v = Vampire()
+    presence = disciplines['Presence']
+    value = 6
+    v.disciplines[presence] = value
+    self.assertEqual(v.disciplines[presence], value)
+
+    def foo(): v.disciplines[presence] = 11
+    self.assertRaises(ValueError, foo)
+
+  def test_backgrounds(self):
+    v = Vampire()
+    allies = backgrounds['Allies']
+    value = 5
+    v.backgrounds[allies] = value
+    self.assertEqual(v.backgrounds[allies], value)
+
+    def foo(): v.backgrounds[allies] = 6
+    self.assertRaises(ValueError, foo)
 
 if __name__ == '__main__':
     unittest.main()
