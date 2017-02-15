@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import os
+import os, pickle
 from collections import namedtuple
 import re
 
@@ -17,7 +17,7 @@ Archetype = namedtuple('Archetype', ['name', 'description'])
 Clan = namedtuple('Clan', ['name', 'disciplines', 'weakness', 'weakness_description', 'description'])
 Discipline = namedtuple('Discipline', ['name', 'sorcery', 'powers', 'description'])
 Power = namedtuple('Power', ['name', 'level', 'description'])
-Attribute = namedtuple('Atttribute', ['name', 'category', 'levels', 'description'])
+Attribute = namedtuple('Attribute', ['name', 'category', 'levels', 'description'])
 Virtue = namedtuple('Virtue', ['name', 'levels', 'description'])
 SorceryPath = namedtuple('SorceryPath', ['name', 'type', 'levels', 'description'])
 Ritual = namedtuple('Ritual', ['name', 'type', 'description'])
@@ -34,7 +34,9 @@ attributes_path = os.path.join(rules_root, 'attributes')
 virtues_path = os.path.join(rules_root, 'virtues')
 sorcery_path = os.path.join(rules_root, 'sorcery_paths')
 rituals_path = os.path.join(rules_root, 'sorcery_rituals')
-dst_path = '../build/vtm20_rules.json'
+json_dst_path = '../build/vtm20_rules.json'
+pickle_dst_path = '../build/vtm20_rules.pickle'
+
 
 def backgrounds():
   posts = []
@@ -235,22 +237,27 @@ def sorcery_rituals():
       ))
   return posts
 
-if __name__ == '__main__':
-  rules = {
-    'abilities': abilities(),
-    'archetypes': archetypes(),
-    'attributes': attributes(),
-    'backgrounds': backgrounds(),
-    'clans': clans(),
-    'disciplines' : disciplines(),
-    'merits': merits(),
-    'moralities': moralities(),
-    'virtues': virtues(),
-    'sorcery': {
-      'paths' : sorcery_paths(),
-      'rituals': sorcery_rituals()
-    }
-  }
 
-  with open(dst_path, 'w') as f:
+rules = {
+  'abilities': abilities(),
+  'archetypes': archetypes(),
+  'attributes': attributes(),
+  'backgrounds': backgrounds(),
+  'clans': clans(),
+  'disciplines' : disciplines(),
+  'merits': merits(),
+  'moralities': moralities(),
+  'virtues': virtues(),
+  'sorcery': {
+    'paths' : sorcery_paths(),
+    'rituals': sorcery_rituals()
+  }
+}
+
+if __name__ == '__main__':
+  with open(json_dst_path, 'w') as f:
     f.write(json.dumps(rules, indent=4 * ' '))
+
+  with open(pickle_dst_path, 'wb') as f:
+    pickle.dump(rules, f)
+    
