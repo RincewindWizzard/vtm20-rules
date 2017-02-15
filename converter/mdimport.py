@@ -34,6 +34,7 @@ attributes_path = os.path.join(rules_root, 'attributes')
 virtues_path = os.path.join(rules_root, 'virtues')
 sorcery_path = os.path.join(rules_root, 'sorcery_paths')
 rituals_path = os.path.join(rules_root, 'sorcery_rituals')
+dst_path = '../build/vtm20_rules.json'
 
 def backgrounds():
   posts = []
@@ -251,4 +252,5 @@ if __name__ == '__main__':
     }
   }
 
-  print(json.dumps(rules, indent=4 * ' '))
+  with open(dst_path, 'w') as f:
+    f.write(json.dumps(rules, indent=4 * ' '))
