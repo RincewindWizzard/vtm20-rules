@@ -1,15 +1,12 @@
--- Structure
-CREATE TABLE Traits (
+PRAGMA foreign_keys = ON;
+CREATE TABLE TraitCategories (
   Name TEXT PRIMARY KEY,
-  Type TEXT,
-  Base      INT DEFAULT 0,  -- Points given at First step
-  Freebie   INT DEFAULT 0,  -- Points gained through Freebie
-  XP        INT DEFAULT 0   -- Points gained through experience
+  Type TEXT
   CHECK(Type IN (
     -- Attributes
-    'Physical', 
-    'Social', 
-    'Mental', 
+    'Physical',
+    'Social',
+    'Mental',
     -- Abilities
     'Talent',
     'Skill',
@@ -18,153 +15,257 @@ CREATE TABLE Traits (
     'Discipline',
     'Background',
     'Virtue',
+    'Willpower',
     'Path of Enlighment'
   )) NOT NULL
 );
 
-CREATE TABLE Merits (
-  Name TEXT PRIMARY KEY,
-  Points INT
+-- This Table contains a list of all Dots (Base, Freebie, XP) spent.
+-- Beware that Dots != Freebie/XP spent!
+
+CREATE TABLE Dots (
+  Type TEXT,
+  Trait TEXT,
+  time t TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  CHECK(Type IN ('Base', 'Creation', 'Freebie', 'XP')) NOT NULL,
+  FOREIGN KEY(Trait) REFERENCES TraitCategories(Name)
 );
 
-CREATE TABLE Properties (
-  Name TEXT PRIMARY KEY,
-  Value TEXT
+CREATE TABLE CreationDots (
+  Type Text,
+  Amount INTEGER
 );
 
 
--- How Many Damaged taken?
-CREATE TABLE Damage (
-  Aggravated BOOLEAN
-);
+CREATE VIEW Traits AS
+SELECT Name, TraitCategories.Type as Type, COUNT(Dots.Trait) as Dots
+FROM TraitCategories
+LEFT OUTER JOIN Dots ON Dots.Trait = TraitCategories.Name
+GROUP BY Name;
+
+CREATE VIEW DotsSpent AS
+SELECT TraitCategories.Type AS Type, Dots.Type AS DotType, COUNT() as Dots
+FROM Dots 
+LEFT OUTER JOIN TraitCategories 
+ON Dots.Trait = TraitCategories.Name 
+GROUP BY TraitCategories.Type, Dots.Type;
+
+CREATE VIEW Attributes AS
+SELECT *
+FROM Traits
+WHERE Type in ('Physical', 'Social', 'Mental');
+
+-- Order of Primary, secondary, tertiary Attributes
+CREATE VIEW AttributeOrder AS
+SELECT Type FROM DotsSpent
+WHERE DotType = 'Creation' AND Type in ('Physical', 'Social', 'Mental')
+ORDER BY Dots DESC;
 
 
----------------------------------------------------------------
--- Data
-INSERT INTO Properties VALUES ('Name', NULL);
-INSERT INTO Properties VALUES ('Player', NULL);
-INSERT INTO Properties VALUES ('Chronicle', NULL);
+CREATE VIEW Abilities AS
+SELECT Name, TraitCategories.Type as Type, COUNT(Dots.Type) as Dots
+FROM TraitCategories
+LEFT OUTER JOIN Dots ON Dots.Trait = TraitCategories.Name
+WHERE TraitCategories.Type in ('Talent', 'Skill', 'Knowledge')
+GROUP BY Name;
 
-INSERT INTO Properties VALUES ('Nature', NULL);
-INSERT INTO Properties VALUES ('Demeanor', NULL);
-INSERT INTO Properties VALUES ('Concept', NULL);
+CREATE VIEW Virtues AS
+SELECT Name, TraitCategories.Type as Type, COUNT() as Dots
+FROM TraitCategories
+JOIN Dots
+ON Dots.Trait = TraitCategories.Name
+WHERE TraitCategories.Type = 'Virtue'
+GROUP BY Dots.Trait;
 
-INSERT INTO Properties VALUES ('Clan', NULL);
--- Generation is computed with its corresponding Merit/Flaw
-INSERT INTO Properties VALUES ('Sire', NULL);
-INSERT INTO Properties VALUES ('Path of Enlighment', 'Humanity');
+CREATE VIEW Humanity AS
+SELECT 'Humanity' as Name, SUM(Dots) as Dots
+from virtues
+where Name in ('Conscience', 'Self-Control');
 
+-- select * from TraitCategories JOIN Dots ON Dots.Trait = TraitCategories.Name WHERE TraitCategories.Type in ('Physical', 'Social', 'Mental');
 
+-- Dots Available
+INSERT INTO CreationDots (Type, Amount) VALUES ('Attributes', 7);
+INSERT INTO CreationDots (Type, Amount) VALUES ('Attributes', 5);
+INSERT INTO CreationDots (Type, Amount) VALUES ('Attributes', 3);
+INSERT INTO CreationDots (Type, Amount) VALUES ('Abilities', 13);
+INSERT INTO CreationDots (Type, Amount) VALUES ('Abilities', 9);
+INSERT INTO CreationDots (Type, Amount) VALUES ('Abilities', 5);
+INSERT INTO CreationDots (Type, Amount) VALUES ('Virtues', 7);
+
+-- Trait Categories
 -- Attributes
-INSERT INTO Traits (Name, Type) VALUES ('Strength',  'Physical');
-INSERT INTO Traits (Name, Type) VALUES ('Dexterity', 'Physical');
-INSERT INTO Traits (Name, Type) VALUES ('Stamina',   'Physical');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Strength',  'Physical');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Dexterity', 'Physical');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Stamina',   'Physical');
 
-INSERT INTO Traits (Name, Type) VALUES ('Charisma',  'Social');
-INSERT INTO Traits (Name, Type) VALUES ('Manipulation',  'Social');
-INSERT INTO Traits (Name, Type) VALUES ('Apearance',  'Social');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Charisma',  'Social');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Manipulation',  'Social');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Appearance',  'Social');
 
-INSERT INTO Traits (Name, Type) VALUES ('Perception',  'Mental');
-INSERT INTO Traits (Name, Type) VALUES ('Intelligence',  'Mental');
-INSERT INTO Traits (Name, Type) VALUES ('Wits',  'Mental');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Perception',  'Mental');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Intelligence',  'Mental');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Wits',  'Mental');
 
 -- Abilities
-INSERT INTO Traits (Name, Type) VALUES ('Alertness',  'Talent');
-INSERT INTO Traits (Name, Type) VALUES ('Athletics',  'Talent');
-INSERT INTO Traits (Name, Type) VALUES ('Awareness',  'Talent');
-INSERT INTO Traits (Name, Type) VALUES ('Brawl',  'Talent');
-INSERT INTO Traits (Name, Type) VALUES ('Empathy',  'Talent');
-INSERT INTO Traits (Name, Type) VALUES ('Expression',  'Talent');
-INSERT INTO Traits (Name, Type) VALUES ('Intimidation',  'Talent');
-INSERT INTO Traits (Name, Type) VALUES ('Leadership',  'Talent');
-INSERT INTO Traits (Name, Type) VALUES ('Streetwise',  'Talent');
-INSERT INTO Traits (Name, Type) VALUES ('Subterfuge',  'Talent');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Alertness',  'Talent');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Athletics',  'Talent');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Awareness',  'Talent');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Brawl',  'Talent');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Empathy',  'Talent');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Expression',  'Talent');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Intimidation',  'Talent');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Leadership',  'Talent');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Streetwise',  'Talent');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Subterfuge',  'Talent');
 
-INSERT INTO Traits (Name, Type) VALUES ('Animal Ken',  'Skill');
-INSERT INTO Traits (Name, Type) VALUES ('Crafts',  'Skill');
-INSERT INTO Traits (Name, Type) VALUES ('Drive',  'Skill');
-INSERT INTO Traits (Name, Type) VALUES ('Etiquette',  'Skill');
-INSERT INTO Traits (Name, Type) VALUES ('Firearms',  'Skill');
-INSERT INTO Traits (Name, Type) VALUES ('Larceny',  'Skill');
-INSERT INTO Traits (Name, Type) VALUES ('Melee',  'Skill');
-INSERT INTO Traits (Name, Type) VALUES ('Performance',  'Skill');
-INSERT INTO Traits (Name, Type) VALUES ('Stealth',  'Skill');
-INSERT INTO Traits (Name, Type) VALUES ('Survival',  'Skill');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Animal Ken',  'Skill');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Crafts',  'Skill');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Drive',  'Skill');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Etiquette',  'Skill');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Firearms',  'Skill');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Larceny',  'Skill');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Melee',  'Skill');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Performance',  'Skill');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Stealth',  'Skill');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Survival',  'Skill');
 
-INSERT INTO Traits (Name, Type) VALUES ('Academics',  'Knowledge');
-INSERT INTO Traits (Name, Type) VALUES ('Computer',  'Knowledge');
-INSERT INTO Traits (Name, Type) VALUES ('Finance',  'Knowledge');
-INSERT INTO Traits (Name, Type) VALUES ('Investigation',  'Knowledge');
-INSERT INTO Traits (Name, Type) VALUES ('Law',  'Knowledge');
-INSERT INTO Traits (Name, Type) VALUES ('Medicine',  'Knowledge');
-INSERT INTO Traits (Name, Type) VALUES ('Occult',  'Knowledge');
-INSERT INTO Traits (Name, Type) VALUES ('Politics',  'Knowledge');
-INSERT INTO Traits (Name, Type) VALUES ('Science',  'Knowledge');
-INSERT INTO Traits (Name, Type) VALUES ('Technology',  'Knowledge');
-
-
-INSERT INTO Traits (Name, Type) VALUES ('Conscience',  'Virtue');
-INSERT INTO Traits (Name, Type) VALUES ('Self-Control',  'Virtue');
-INSERT INTO Traits (Name, Type) VALUES ('Willpower',  'Virtue');
-
-INSERT INTO Traits (Name, Type) VALUES ('Humanity', 'Path of Enlighment');
-UPDATE Properties SET Value='Name' WHERE Name = 'Name';
-UPDATE Properties SET Value='Tzimiske' WHERE Name = 'Clan';
+INSERT INTO TraitCategories (Name, Type) VALUES ('Academics',  'Knowledge');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Computer',  'Knowledge');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Finance',  'Knowledge');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Investigation',  'Knowledge');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Law',  'Knowledge');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Medicine',  'Knowledge');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Occult',  'Knowledge');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Politics',  'Knowledge');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Science',  'Knowledge');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Technology',  'Knowledge');
 
 
--- Attributes
-UPDATE Traits SET Base = 2, XP = 1 WHERE Name = 'Strength';
-UPDATE Traits SET Base = 2 WHERE Name = 'Dexterity';
-UPDATE Traits SET Base = 4 WHERE Name = 'Stamina';
+INSERT INTO TraitCategories (Name, Type) VALUES ('Conscience',  'Virtue');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Self-Control',  'Virtue');
+INSERT INTO TraitCategories (Name, Type) VALUES ('Courage',  'Virtue');
 
-UPDATE Traits SET Base = 1 WHERE Name = 'Charisma';
-UPDATE Traits SET Base = 3 WHERE Name = 'Manipulation';
-UPDATE Traits SET Base = 2 WHERE Name = 'Appearance';
+INSERT INTO TraitCategories (Name, Type) VALUES ('Willpower',  'Willpower');
 
-UPDATE Traits SET Base = 4 WHERE Name = 'Perception';
-UPDATE Traits SET Base = 3 WHERE Name = 'Intelligence';
-UPDATE Traits SET Base = 3 WHERE Name = 'Wits';
-
-
-
--- Talents
-UPDATE Traits SET Base = 2 WHERE Name = 'Alertness';
-UPDATE Traits SET Base = 1 WHERE Name = 'Athletics';
-UPDATE Traits SET Base = 2 WHERE Name = 'Brawl';
-UPDATE Traits SET Base = 1 WHERE Name = 'Expression';
-UPDATE Traits SET Base = 3 WHERE Name = 'Intimidation';
-UPDATE Traits SET Base = 3 WHERE Name = 'Leadership';
-UPDATE Traits SET Base = 1 WHERE Name = 'Streetwise';
-
-
--- Skills
-INSERT INTO Traits (Name, Type, Freebie) VALUES ('Crafts(Bodyart)',  'Skill', 3);
-UPDATE Traits SET Base = 2 WHERE Name = 'Drive';
-UPDATE Traits SET Base = 2 WHERE Name = 'Firearms';
-UPDATE Traits SET Base = 2 WHERE Name = 'Larceny';
-UPDATE Traits SET Base = 1 WHERE Name = 'Melee';
-UPDATE Traits SET Base = 2 WHERE Name = 'Stealth';
-
--- Knowledge
-UPDATE Traits SET Base = 1 WHERE Name = 'Computer';
-UPDATE Traits SET Base = 2 WHERE Name = 'Finance';
-INSERT INTO Traits (Name, Type, Base) VALUES ('Linguistics',  'Knowledge', 2);
+INSERT INTO TraitCategories (Name, Type) VALUES ('Humanity', 'Path of Enlighment');
 
 -- Virtues
-UPDATE Traits SET Base = 1 WHERE Name = 'Conscience';
-UPDATE Traits SET Base = 3 WHERE Name = 'Self-Control';
-UPDATE Traits SET Base = 3 WHERE Name = 'Courage';
+INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Conscience');
+INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Self-Control');
+INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Courage');
 
--- Disciplines
-INSERT INTO Traits (Name, Type, Base) VALUES('Auspex', 'Discipline', 1);
-INSERT INTO Traits (Name, Type, Base, Freebie) VALUES('Vicissitude', 'Discipline', 1, 1);
-INSERT INTO Traits (Name, Type, Base) VALUES('Animalism', 'Discipline', 1);
+-- Base Values
+INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Strength');
+INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Dexterity');
+INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Stamina');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Charisma');
+INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Manipulation');
+INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Appearance');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Perception');
+INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Intelligence');
+INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Wits');
+-- Attributes
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Strength');
+INSERT INTO Dots (Type, Trait) VALUES ('XP', 'Strength');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Dexterity');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Stamina');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Stamina');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Stamina');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Manipulation');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Manipulation');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Appearance');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Perception');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Perception');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Perception');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Intelligence');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Intelligence');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Wits');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Wits');
+
+
+-- Abilities
+--   Talents
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Alertness');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Alertness');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Athletics');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Brawl');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Brawl');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Expression');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Intimidation');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Intimidation');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Intimidation');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Leadership');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Leadership');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Leadership');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Streetwise');
+
+--   Skills
+--INSERT INTO TraitCategories (Name, Type) VALUES ('Crafts(Bodyart)',  'Skill');
+--INSERT INTO Dots (Type, Trait) VALUES ('Freebie', 'Crafts(Bodyart)');
+--INSERT INTO Dots (Type, Trait) VALUES ('Freebie', 'Crafts(Bodyart)');
+--INSERT INTO Dots (Type, Trait) VALUES ('Freebie', 'Crafts(Bodyart)');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Drive');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Drive');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Firearms');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Firearms');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Larceny');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Larceny');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Melee');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Stealth');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Stealth');
+
+--   Knowledges
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Computer');
+
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Finance');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Finance');
+
+INSERT INTO TraitCategories (Name, Type) VALUES ('Linguistics',  'Knowledge');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Linguistics');
+
+
+-- Advantages
+--INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Auspex');
+--INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Vicissitude');
+--INSERT INTO Dots (Type, Trait) VALUES ('Freebie', 'Vicissitude');
+--INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Animalism');
 
 -- Backgrounds
-INSERT INTO Traits (Name, Type, Base, Freebie) VALUES ('Resources', 'Background', 3, 0);
-INSERT INTO Traits (Name, Type, Base, Freebie) VALUES ('Fame', 'Background', 1, 0);
-INSERT INTO Traits (Name, Type, Base, Freebie) VALUES ('Allies', 'Background', 1, 1);
+--INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Resources');
+--INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Resources');
+--INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Resources');
+--INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Fame');
+--INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Allies');
+--INSERT INTO Dots (Type, Trait) VALUES ('Freebie', 'Allies');
+
+-- Virtues
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Conscience');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Self-Control');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Self-Control');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Self-Control');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Courage');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Courage');
+INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Courage');
 
 
--- Humanity
-UPDATE Traits SET Freebie = 1 WHERE Name = 'Humanity';
