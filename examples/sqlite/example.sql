@@ -24,12 +24,20 @@ CREATE TABLE TraitCategories (
 -- Beware that Dots != Freebie/XP spent!
 
 CREATE TABLE Dots (
-  Type TEXT,
-  Trait TEXT,
-  time t TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-  CHECK(Type IN ('Base', 'Creation', 'Freebie', 'XP')) NOT NULL,
+  Type TEXT NOT NULL,
+  Trait TEXT NOT NULL,
+  time t TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY(Type) REFERENCES DotTypes(Name),
   FOREIGN KEY(Trait) REFERENCES TraitCategories(Name)
 );
+
+CREATE TABLE DotTypes (
+  Name TEXT PRIMARY KEY NOT NULL  
+);
+INSERT INTO DotTypes VALUES ('Base');
+INSERT INTO DotTypes VALUES ('Creation');
+INSERT INTO DotTypes VALUES ('Freebie');
+INSERT INTO DotTypes VALUES ('XP');
 
 CREATE TABLE CreationDots (
   Type Text,
@@ -43,12 +51,21 @@ FROM TraitCategories
 LEFT OUTER JOIN Dots ON Dots.Trait = TraitCategories.Name
 GROUP BY Name;
 
+
+--Select DotTypes.Name as DotType, TraitCategories.Name as Trait, TraitCategories.Type as TraitType from DotTypes CROSS JOIN TraitCategories LEFT OUTER JOIN Dots ON DotTypes.Name = Dots.Type AND TraitCategories.Name = Dots.Trait;
+
 CREATE VIEW DotsSpent AS
-SELECT TraitCategories.Type AS Type, Dots.Type AS DotType, COUNT() as Dots
-FROM Dots 
-LEFT OUTER JOIN TraitCategories 
-ON Dots.Trait = TraitCategories.Name 
-GROUP BY TraitCategories.Type, Dots.Type;
+SELECT 
+  DotTypes.Name as DotType, 
+  TraitCategories.Name as Trait, 
+  TraitCategories.Type as TraitType, 
+  COUNT(Dots.time) as Dots
+FROM DotTypes 
+CROSS JOIN TraitCategories 
+LEFT OUTER JOIN Dots 
+ON DotTypes.Name = Dots.Type 
+AND TraitCategories.Name = Dots.Trait 
+GROUP BY DotTypes.Name, TraitCategories.Name;
 
 CREATE VIEW Attributes AS
 SELECT *
@@ -57,9 +74,12 @@ WHERE Type in ('Physical', 'Social', 'Mental');
 
 -- Order of Primary, secondary, tertiary Attributes
 CREATE VIEW AttributeOrder AS
-SELECT Type FROM DotsSpent
-WHERE DotType = 'Creation' AND Type in ('Physical', 'Social', 'Mental')
-ORDER BY Dots DESC;
+SELECT TraitType, SUM(Dots)
+FROM DotsSpent
+WHERE DotType = 'Creation' 
+AND TraitType in ('Physical', 'Social', 'Mental')
+GROUP BY TraitType
+ORDER BY SUM(Dots) DESC;
 
 
 CREATE VIEW Abilities AS
@@ -167,105 +187,3 @@ INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Appearance');
 INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Perception');
 INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Intelligence');
 INSERT INTO Dots (Type, Trait) VALUES ('Base', 'Wits');
--- Attributes
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Strength');
-INSERT INTO Dots (Type, Trait) VALUES ('XP', 'Strength');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Dexterity');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Stamina');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Stamina');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Stamina');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Manipulation');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Manipulation');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Appearance');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Perception');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Perception');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Perception');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Intelligence');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Intelligence');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Wits');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Wits');
-
-
--- Abilities
---   Talents
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Alertness');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Alertness');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Athletics');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Brawl');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Brawl');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Expression');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Intimidation');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Intimidation');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Intimidation');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Leadership');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Leadership');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Leadership');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Streetwise');
-
---   Skills
---INSERT INTO TraitCategories (Name, Type) VALUES ('Crafts(Bodyart)',  'Skill');
---INSERT INTO Dots (Type, Trait) VALUES ('Freebie', 'Crafts(Bodyart)');
---INSERT INTO Dots (Type, Trait) VALUES ('Freebie', 'Crafts(Bodyart)');
---INSERT INTO Dots (Type, Trait) VALUES ('Freebie', 'Crafts(Bodyart)');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Drive');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Drive');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Firearms');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Firearms');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Larceny');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Larceny');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Melee');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Stealth');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Stealth');
-
---   Knowledges
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Computer');
-
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Finance');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Finance');
-
-INSERT INTO TraitCategories (Name, Type) VALUES ('Linguistics',  'Knowledge');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Linguistics');
-
-
--- Advantages
---INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Auspex');
---INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Vicissitude');
---INSERT INTO Dots (Type, Trait) VALUES ('Freebie', 'Vicissitude');
---INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Animalism');
-
--- Backgrounds
---INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Resources');
---INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Resources');
---INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Resources');
---INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Fame');
---INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Allies');
---INSERT INTO Dots (Type, Trait) VALUES ('Freebie', 'Allies');
-
--- Virtues
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Conscience');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Self-Control');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Self-Control');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Self-Control');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Courage');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Courage');
-INSERT INTO Dots (Type, Trait) VALUES ('Creation', 'Courage');
-
-

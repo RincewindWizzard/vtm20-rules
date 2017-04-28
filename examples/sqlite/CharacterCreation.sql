@@ -24,12 +24,20 @@ CREATE TABLE TraitCategories (
 -- Beware that Dots != Freebie/XP spent!
 
 CREATE TABLE Dots (
-  Type TEXT,
-  Trait TEXT,
-  time t TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-  CHECK(Type IN ('Base', 'Creation', 'Freebie', 'XP')) NOT NULL,
+  Type TEXT NOT NULL,
+  Trait TEXT NOT NULL,
+  time t TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY(Type) REFERENCES DotTypes(Name),
   FOREIGN KEY(Trait) REFERENCES TraitCategories(Name)
 );
+
+CREATE TABLE DotTypes (
+  Name TEXT PRIMARY KEY NOT NULL  
+);
+INSERT INTO DotTypes VALUES ('Base');
+INSERT INTO DotTypes VALUES ('Creation');
+INSERT INTO DotTypes VALUES ('Freebie');
+INSERT INTO DotTypes VALUES ('XP');
 
 CREATE TABLE CreationDots (
   Type Text,
@@ -43,12 +51,21 @@ FROM TraitCategories
 LEFT OUTER JOIN Dots ON Dots.Trait = TraitCategories.Name
 GROUP BY Name;
 
+
+--Select DotTypes.Name as DotType, TraitCategories.Name as Trait, TraitCategories.Type as TraitType from DotTypes CROSS JOIN TraitCategories LEFT OUTER JOIN Dots ON DotTypes.Name = Dots.Type AND TraitCategories.Name = Dots.Trait;
+
 CREATE VIEW DotsSpent AS
-SELECT TraitCategories.Type AS Type, Dots.Type AS DotType, COUNT() as Dots
-FROM Dots 
-LEFT OUTER JOIN TraitCategories 
-ON Dots.Trait = TraitCategories.Name 
-GROUP BY TraitCategories.Type, Dots.Type;
+SELECT 
+  DotTypes.Name as DotType, 
+  TraitCategories.Name as Trait, 
+  TraitCategories.Type as TraitType, 
+  COUNT(Dots.time) as Dots
+FROM DotTypes 
+CROSS JOIN TraitCategories 
+LEFT OUTER JOIN Dots 
+ON DotTypes.Name = Dots.Type 
+AND TraitCategories.Name = Dots.Trait 
+GROUP BY DotTypes.Name, TraitCategories.Name;
 
 CREATE VIEW Attributes AS
 SELECT *
@@ -57,9 +74,12 @@ WHERE Type in ('Physical', 'Social', 'Mental');
 
 -- Order of Primary, secondary, tertiary Attributes
 CREATE VIEW AttributeOrder AS
-SELECT Type FROM DotsSpent
-WHERE DotType = 'Creation' AND Type in ('Physical', 'Social', 'Mental')
-ORDER BY Dots DESC;
+SELECT TraitType, SUM(Dots)
+FROM DotsSpent
+WHERE DotType = 'Creation' 
+AND TraitType in ('Physical', 'Social', 'Mental')
+GROUP BY TraitType
+ORDER BY SUM(Dots) DESC;
 
 
 CREATE VIEW Abilities AS
