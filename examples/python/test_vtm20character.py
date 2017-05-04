@@ -36,20 +36,26 @@ class TestVtM20(unittest.TestCase):
     vamp.spendDot('Animal Ken', 'Creation', 2)
     vamp.spendDot('Academics', 'Creation', 1)
     self.assertEqual(vamp.abilityOrdering, ['Talent', 'Skill', 'Knowledge'])
-    vamp.spendDot('Academics', 'Creation', 3)
+    vamp.spendDot('Computer', 'Creation', 2)
+    self.assertTrue(vamp.dotsAvailable('Knowledge') >= 2)
+    self.assertEqual(vamp.dotsAvailable('Computer'), 1)
+    vamp.spendDot('Computer', 'Creation', 1)
     self.assertEqual(vamp.abilityOrdering, ['Knowledge', 'Talent', 'Skill'])
 
     self.assertEqual(
-      [6, 3, 9], 
-      [vamp.dotsAvailable(x) for x in ['Talent', 'Skill', 'Knowledge']]
+      [9, 6, 3], 
+      [vamp.dotsAvailable(x) for x in ['Knowledge', 'Talent', 'Skill']]
     )
 
   def test_spending_algorithm(self):
     vamp = VtM20Character()
-    vamp.spendDot('Brawl', amount=20)
-    self.assertEqual(vamp.getTrait('Brawl'), 20)
+    vamp.spendDot('Brawl', amount=100)
+    self.assertEqual(vamp.getTrait('Brawl'), 100)
     self.assertEqual(vamp.dotsAvailable('Brawl', 'Creation'), 0)
-    print(vamp.getTraitDots('Brawl'))
+    self.assertEqual(vamp.dotsAvailable('Brawl', 'Freebie'), 0)
+    base, creation, freebie, xp = vamp.getTraitDots('Brawl')
+
+    self.assertEqual((base, creation, freebie, xp), (0, 3, 0, 97))
 
   def test_traits(self):
     vamp = VtM20Character()
