@@ -81,6 +81,15 @@ AND TraitType in ('Physical', 'Social', 'Mental')
 GROUP BY TraitType
 ORDER BY SUM(Dots) DESC;
 
+-- Order of Primary, secondary, tertiary Attributes
+CREATE VIEW AbilityOrder AS
+SELECT TraitType, SUM(Dots)
+FROM DotsSpent
+WHERE DotType = 'Creation' 
+AND TraitType in ('Talent', 'Skill', 'Knowledge')
+GROUP BY TraitType
+ORDER BY SUM(Dots) DESC;
+
 
 CREATE VIEW Abilities AS
 SELECT Name, TraitCategories.Type as Type, COUNT(Dots.Type) as Dots

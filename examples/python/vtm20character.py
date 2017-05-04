@@ -5,6 +5,8 @@ sql_file = '../sqlite/CharacterCreation.sql'
 
 
 class VtM20Character(object):
+  ATTRIBUTE_CATEGORIES = ['Physical', 'Social', 'Mental']
+  ABILITY_CATEGORIES = ['Talent', 'Skill', 'Knowledge']
   def __init__(self):
     self.db = sqlite3.connect(':memory:')
     with open(sql_file, 'r') as f:
@@ -20,6 +22,15 @@ class VtM20Character(object):
     for row in self.db.execute('SELECT Dots FROM Traits WHERE Name = ?', (trait,)):
       return row[0]
 
+  def getTraitDots(self, trait):
+    dots = []
+    for row in self.db.execute(
+      'SELECT Type, COUNT(Type) FROM Dots WHERE Trait = ? GROUP BY Type ORDER BY TYPE ASC',
+      (trait,)):
+      dots.append(row[1])
+    return dots
+
+
   def getTraitType(self, trait):
     try:
       return list(
@@ -29,18 +40,42 @@ class VtM20Character(object):
       return None
 
   def dotsAvailable(self, trait, dottype = 'Creation'):
-    category = self.getTraitType(trait)
-    if category in ['Physical', 'Social', 'Mental']:
-      return [7, 5, 3][self.attributeOrdering.index(category)] - self.dotsSpent(category, dottype)
-    return 0;
+    if trait in VtM20Character.ATTRIBUTE_CATEGORIES + VtM20Character.ABILITY_CATEGORIES:
+      category = trait
+    else:
+      category = self.getTraitType(trait)
 
-  def spendDot(self, trait, dottype, amount = 1):
-    if dottype in ['Creation', 'Freebie'] and self.dotsAvailable(trait, dottype) < amount: 
-      raise ValueError("Not enough dots available! {} < {}".format(
-        self.dotsAvailable(trait, dottype), amount))
+    if category in VtM20Character.ATTRIBUTE_CATEGORIES:
+      return [7, 5, 3][
+        self.attributeOrdering.index(category)
+      ] - self.dotsSpent(category, dottype)
+    if category in VtM20Character.ABILITY_CATEGORIES:
+      return [13, 9, 5][
+        self.abilityOrdering.index(category)
+      ] - self.dotsSpent(category, dottype)
+    raise ValueError('category not found')
 
-    for i in range(amount):
-      self.db.execute('INSERT INTO Dots (Type, Trait) VALUES (?, ?)', (dottype, trait))
+  def spendDot(self, trait, dottype=None, amount = 1):
+    if amount > 0:
+      if dottype == None:
+        creation_avail = self.dotsAvailable(trait, 'Creation')
+        if creation_avail > 0:
+          self.spendDot(trait, 'Creation', min(amount, creation_avail))
+          amount -= creation_avail
+        if amount > 0:
+          freebie_avail = self.dotsAvailable(trait, 'Freebie')
+          if freebie_avail > 0:
+            self.spendDot(trait, 'Freebie', min(amount, freebie_avail))
+            amount -= freebie_avail
+        if amount > 0:
+          self.spendDot(trait, 'XP', amount)
+      else:
+        if dottype in ['Creation', 'Freebie'] and self.dotsAvailable(trait, dottype) < amount: 
+          raise ValueError("Not enough dots available! {} < {}".format(
+            self.dotsAvailable(trait, dottype), amount))
+
+        for i in range(amount):
+          self.db.execute('INSERT INTO Dots (Type, Trait) VALUES (?, ?)', (dottype, trait))
 
   def deleteDot(self, trait, dottype, amount = 1):
     return self.db.execute(
@@ -60,6 +95,13 @@ class VtM20Character(object):
   def attributeOrdering(self):
     rows = []
     for row in self.db.execute('SELECT * FROM AttributeOrder'):
+      rows.append(row[0])
+    return rows
+
+  @property
+  def abilityOrdering(self):
+    rows = []
+    for row in self.db.execute('SELECT * FROM AbilityOrder'):
       rows.append(row[0])
     return rows
 
