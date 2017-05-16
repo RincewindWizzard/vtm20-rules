@@ -3,32 +3,47 @@
 
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QVBoxLayout, QLabel, QSpinBox, QSizePolicy
+from PyQt5 import uic
+from PyQt5.QtCore import QObject, Qt
+
 from vtm20character import VtM20Character
 
-class DotWidget(QWidget):
-  def __init__(self, trait, vamp):
-    super(DotWidget, self).__init__()
+def borderless(layout):
+  layout.setSpacing(0)
+  layout.setContentsMargins(0, 0, 0, 0)
+  return layout
+
+class DotWidget(object):
+  def __init__(self, parent, trait, vamp, debug=False):
+    self.parent = parent
     self.trait = trait
     self.vamp = vamp
-    hbox = borderless(QHBoxLayout())
-    self.setLayout(hbox)
+    self.debug = debug
+
+
     self.trait_label = QLabel()
     self.trait_label.setText(trait)
-    hbox.addWidget(self.trait_label)
 
-    self.dot_label = QLabel()
-    self.update_dots_spent()
-    hbox.addWidget(self.dot_label)
 
     self.spinbox = QSpinBox()
-    self.spinbox.valueChanged.connect(self.valueChanged)
+    self.spinbox.valueChanged.connect(lambda v: self.valueChanged(v))
     self.spinbox.setMinimum(self.vamp.getTraitDots(self.trait)[0])
     self.spinbox.setMaximum(10)
     self.spinbox.setSizePolicy(QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed))
-    hbox.addWidget(self.spinbox)
+
+    self.trait_label.setSizePolicy(QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding))
+    self.spinbox.setSizePolicy(QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed))
+    parent.addRow(self.trait_label, self.spinbox)
+    self.update_dots_spent()
 
   def update_dots_spent(self):
-    self.dot_label.setText('({} + {} + {} + {})'.format(*self.vamp.getTraitDots(self.trait)))
+    if self.debug:
+      self.trait_label.setText('{} ({} + {} + {} + {})'.format(
+        self.trait,
+        *self.vamp.getTraitDots(self.trait))
+      )
+    else:
+      self.trait_label.setText(self.trait)
 
   def valueChanged(self, value):
     delta = value - self.vamp.getTrait(self.trait)
@@ -38,79 +53,61 @@ class DotWidget(QWidget):
       self.vamp.deleteDot(self.trait, None, -delta)
     self.update_dots_spent()
 
-def borderless(layout):
-  layout.setSpacing(0)
-  layout.setContentsMargins(0, 0, 0, 0)
-  return layout
-
-class VtM20Editor(QWidget):
+class VtM20Editor(object):
   def __init__(self, *args):
-    super(VtM20Editor, self).__init__(*args)
+    #super(VtM20Editor, self).__init__(*args)
     self.vamp = VtM20Character()
-    self.resize(500, 500)
-    self.setWindowTitle('Vampire the Masquerade 20th Character Editor')
+    #self.resize(500, 500)
+    #self.setWindowTitle('Vampire the Masquerade 20th Character Editor')
     #self.setWindowIcon(QIcon('web.png'))
+    self.ui = uic.loadUi('charactersheet.ui')
+    self.addDotWidgets()
 
-    vbox = borderless(QVBoxLayout())
-    attributes_widget = QWidget()
-    vbox.addWidget(attributes_widget)
-    
-    hbox = borderless(QHBoxLayout())
-    attributes_widget.setLayout(hbox)
-
-    self.physical_widget = QWidget()
-    self.physical_widget.setLayout(borderless(QVBoxLayout()))
-    hbox.addWidget(self.physical_widget)
-
-    self.social_widget = QWidget()
-    self.social_widget.setLayout(borderless(QVBoxLayout()))
-    hbox.addWidget(self.social_widget)
-
-    self.mental_widget = QWidget()
-    self.mental_widget.setLayout(borderless(QVBoxLayout()))
-    hbox.addWidget(self.mental_widget)
-
-
-    abilities_widget = QWidget()
-    hbox = borderless(QHBoxLayout())
-    abilities_widget.setLayout(hbox)
-
-    self.talent_widget = QWidget()
-    self.talent_widget.setLayout(borderless(QVBoxLayout()))
-    hbox.addWidget(self.talent_widget)
-
-    self.skill_widget = QWidget()
-    self.skill_widget.setLayout(borderless(QVBoxLayout()))
-    hbox.addWidget(self.skill_widget)
-
-    self.knowledge_widget = QWidget()
-    self.knowledge_widget.setLayout(borderless(QVBoxLayout()))
-    hbox.addWidget(self.knowledge_widget)
-
-
-    vbox.addWidget(abilities_widget)
-
-    self.setLayout(vbox)
-    self.addDotWdigets()
-
-  def addDotWdigets(self):
+  def addDotWidgets(self):
+    self.ui.widget_physical_container.layout().setAlignment(
+      self.ui.widget_physical, 
+      Qt.AlignHCenter
+    )
     for trait in self.vamp.getTraits('Physical'):
-      self.physical_widget.layout().addWidget(DotWidget(trait, self.vamp))
+      DotWidget(self.ui.widget_physical.layout(), trait, self.vamp)
 
+    self.ui.widget_social_container.layout().setAlignment(
+      self.ui.widget_social, 
+      Qt.AlignHCenter
+    )
     for trait in self.vamp.getTraits('Social'):
-      self.social_widget.layout().addWidget(DotWidget(trait, self.vamp))
+      DotWidget(self.ui.widget_social.layout(), trait, self.vamp)
 
+    self.ui.widget_mental_container.layout().setAlignment(
+      self.ui.widget_mental, 
+      Qt.AlignHCenter
+    )
     for trait in self.vamp.getTraits('Mental'):
-      self.mental_widget.layout().addWidget(DotWidget(trait, self.vamp))
+      DotWidget(self.ui.widget_mental.layout(), trait, self.vamp)
 
+    self.ui.widget_talent_container.layout().setAlignment(
+      self.ui.widget_talent, 
+      Qt.AlignHCenter
+    )
     for trait in self.vamp.getTraits('Talent'):
-      self.talent_widget.layout().addWidget(DotWidget(trait, self.vamp))
+      DotWidget(self.ui.widget_talent.layout(), trait, self.vamp)
 
+    self.ui.widget_skill_container.layout().setAlignment(
+      self.ui.widget_skill, 
+      Qt.AlignHCenter
+    )
     for trait in self.vamp.getTraits('Skill'):
-      self.skill_widget.layout().addWidget(DotWidget(trait, self.vamp))
+      DotWidget(self.ui.widget_skill.layout(), trait, self.vamp)
 
+    self.ui.widget_knowledge_container.layout().setAlignment(
+      self.ui.widget_knowledge, 
+      Qt.AlignHCenter
+    )
     for trait in self.vamp.getTraits('Knowledge'):
-      self.knowledge_widget.layout().addWidget(DotWidget(trait, self.vamp))
+      DotWidget(self.ui.widget_knowledge.layout(), trait, self.vamp)
+
+  def show(self):
+    self.ui.show()
 
 
 if __name__ == '__main__':
