@@ -1,5 +1,5 @@
 ---
-Name: Animal_Ken
+Name: "Animal Ken"
 Level1: "Novice: You can get a domesticated horse to let you pet it."
 Level2: "Practiced: You can housebreak a puppy."
 Level3: "Competent: You could train a seeing eye dog."

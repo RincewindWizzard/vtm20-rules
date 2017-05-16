@@ -1,5 +1,5 @@
 ---
-Name: Computers
+Name: Computer
 Level1: "Student: You can navigate touchscreen and traditional point-and-click GUIs."
 Level2: "College: You know your way around various applications and the Internet."
 Level3: "Masters: You know what to do with a text command prompt."

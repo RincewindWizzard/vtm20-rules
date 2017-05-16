@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-
+import os
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QVBoxLayout, QLabel, QSpinBox, QSizePolicy
 from PyQt5 import uic
 from PyQt5.QtCore import QObject, Qt
-
-from vtm20character import VtM20Character
+from .vtm20character import VtM20Character
+from .vtm20character import PHYSICAL, MENTAL, SOCIAL, TALENT, SKILL, KNOWLEDGE
+ui_file = os.path.join(os.path.dirname(__file__), 'ui/charactersheet.ui')
 
 def borderless(layout):
   layout.setSpacing(0)
@@ -60,7 +61,7 @@ class VtM20Editor(object):
     #self.resize(500, 500)
     #self.setWindowTitle('Vampire the Masquerade 20th Character Editor')
     #self.setWindowIcon(QIcon('web.png'))
-    self.ui = uic.loadUi('charactersheet.ui')
+    self.ui = uic.loadUi(ui_file)
     self.addDotWidgets()
 
   def addDotWidgets(self):
@@ -68,53 +69,54 @@ class VtM20Editor(object):
       self.ui.widget_physical, 
       Qt.AlignHCenter
     )
-    for trait in self.vamp.getTraits('Physical'):
+    for trait in self.vamp.getTraits(PHYSICAL):
       DotWidget(self.ui.widget_physical.layout(), trait, self.vamp)
 
     self.ui.widget_social_container.layout().setAlignment(
       self.ui.widget_social, 
       Qt.AlignHCenter
     )
-    for trait in self.vamp.getTraits('Social'):
+    for trait in self.vamp.getTraits(SOCIAL):
       DotWidget(self.ui.widget_social.layout(), trait, self.vamp)
 
     self.ui.widget_mental_container.layout().setAlignment(
       self.ui.widget_mental, 
       Qt.AlignHCenter
     )
-    for trait in self.vamp.getTraits('Mental'):
+    for trait in self.vamp.getTraits(MENTAL):
       DotWidget(self.ui.widget_mental.layout(), trait, self.vamp)
 
     self.ui.widget_talent_container.layout().setAlignment(
       self.ui.widget_talent, 
       Qt.AlignHCenter
     )
-    for trait in self.vamp.getTraits('Talent'):
+    for trait in self.vamp.getTraits(TALENT):
       DotWidget(self.ui.widget_talent.layout(), trait, self.vamp)
 
     self.ui.widget_skill_container.layout().setAlignment(
       self.ui.widget_skill, 
       Qt.AlignHCenter
     )
-    for trait in self.vamp.getTraits('Skill'):
+    for trait in self.vamp.getTraits(SKILL):
       DotWidget(self.ui.widget_skill.layout(), trait, self.vamp)
 
     self.ui.widget_knowledge_container.layout().setAlignment(
       self.ui.widget_knowledge, 
       Qt.AlignHCenter
     )
-    for trait in self.vamp.getTraits('Knowledge'):
+    for trait in self.vamp.getTraits(KNOWLEDGE):
       DotWidget(self.ui.widget_knowledge.layout(), trait, self.vamp)
 
   def show(self):
     self.ui.show()
 
 
-if __name__ == '__main__':
-  app = QApplication(sys.argv)
-
+def main(argv):
+  app = QApplication(argv)
   gui = VtM20Editor()
-
   gui.show()
-   
   sys.exit(app.exec_())
+  
+
+if __name__ == '__main__':
+  main(sys.argv)

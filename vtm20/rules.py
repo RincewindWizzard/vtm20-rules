@@ -22,20 +22,22 @@ Virtue = namedtuple('Virtue', ['name', 'levels', 'description'])
 SorceryPath = namedtuple('SorceryPath', ['name', 'type', 'levels', 'description'])
 Ritual = namedtuple('Ritual', ['name', 'type', 'description'])
 
-rules_root = '../rules/'
-background_path = os.path.join(rules_root, 'backgrounds')
-merits_path = os.path.join(rules_root, 'merits')
-morality_path = os.path.join(rules_root, 'morality')
-abilities_path = os.path.join(rules_root, 'abilities')
-archetypes_path = os.path.join(rules_root, 'archetypes')
-clan_path = os.path.join(rules_root, 'clans')
-disciplines_path = os.path.join(rules_root, 'disciplines')
-attributes_path = os.path.join(rules_root, 'attributes')
-virtues_path = os.path.join(rules_root, 'virtues')
-sorcery_path = os.path.join(rules_root, 'sorcery_paths')
-rituals_path = os.path.join(rules_root, 'sorcery_rituals')
-json_dst_path = '../build/vtm20_rules.json'
-pickle_dst_path = '../build/vtm20_rules.pickle'
+module_path = os.path.dirname(__file__)
+rules_root = os.path.join(module_path, '../docs/rules/')
+background_path    = os.path.join(rules_root, 'backgrounds')
+merits_path        = os.path.join(rules_root, 'merits')
+morality_path      = os.path.join(rules_root, 'morality')
+abilities_path     = os.path.join(rules_root, 'abilities')
+archetypes_path    = os.path.join(rules_root, 'archetypes')
+clan_path          = os.path.join(rules_root, 'clans')
+disciplines_path   = os.path.join(rules_root, 'disciplines')
+attributes_path    = os.path.join(rules_root, 'attributes')
+virtues_path       = os.path.join(rules_root, 'virtues')
+sorcery_path       = os.path.join(rules_root, 'sorcery_paths')
+rituals_path       = os.path.join(rules_root, 'sorcery_rituals')
+json_dst_path = os.path.join(module_path, '../build/vtm20_rules.json')
+pickle_dst_path = os.path.join(module_path, '../build/vtm20_rules.pickle')
+rules_dst_path = os.path.join(module_path, 'sql/04_Insert_Rules.sql')
 
 
 def backgrounds():
@@ -254,10 +256,28 @@ rules = {
   }
 }
 
-if __name__ == '__main__':
-  with open(json_dst_path, 'w') as f:
-    f.write(json.dumps(rules, indent=4 * ' '))
+def toSQL(out):
+  # possible sqlinjection!
+  sql_fmt = "INSERT INTO Traits (Name, Type) VALUES ('{}', '{}');\n"
+  for ability in rules['abilities']:
+    out.write(sql_fmt.format(ability.name, ability.type))
 
-  with open(pickle_dst_path, 'wb') as f:
-    pickle.dump(rules, f)
+  for attribute in rules['attributes']:
+    out.write(sql_fmt.format(attribute.name, attribute.category))
+
+  for virtue in rules['virtues']:
+    out.write(sql_fmt.format(virtue.name, 'virtue'))
+
+  for archetype in rules['archetypes']:
+    out.write("INSERT INTO Archetypes ('Name') VALUES ('{}');\n".format(archetype.name))
+
+
+if __name__ == '__main__':
+  #with open(json_dst_path, 'w') as f:
+  #  f.write(json.dumps(rules, indent=4 * ' '))
+
+  #with open(pickle_dst_path, 'wb') as f:
+  #  pickle.dump(rules, f)
     
+  with open(rules_dst_path, 'w') as f:
+    toSQL(f)
