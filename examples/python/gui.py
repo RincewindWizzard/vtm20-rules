@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QVBoxLayout, QLabel, QSpinBox
+from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QVBoxLayout, QLabel, QSpinBox, QSizePolicy
 from vtm20character import VtM20Character
 
 class DotWidget(QWidget):
@@ -10,7 +10,7 @@ class DotWidget(QWidget):
     super(DotWidget, self).__init__()
     self.trait = trait
     self.vamp = vamp
-    hbox = QHBoxLayout()
+    hbox = borderless(QHBoxLayout())
     self.setLayout(hbox)
     self.trait_label = QLabel()
     self.trait_label.setText(trait)
@@ -23,6 +23,8 @@ class DotWidget(QWidget):
     self.spinbox = QSpinBox()
     self.spinbox.valueChanged.connect(self.valueChanged)
     self.spinbox.setMinimum(self.vamp.getTraitDots(self.trait)[0])
+    self.spinbox.setMaximum(10)
+    self.spinbox.setSizePolicy(QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed))
     hbox.addWidget(self.spinbox)
 
   def update_dots_spent(self):
@@ -35,8 +37,11 @@ class DotWidget(QWidget):
     elif delta < 0:
       self.vamp.deleteDot(self.trait, None, -delta)
     self.update_dots_spent()
-    print(value)
-    
+
+def borderless(layout):
+  layout.setSpacing(0)
+  layout.setContentsMargins(0, 0, 0, 0)
+  return layout
 
 class VtM20Editor(QWidget):
   def __init__(self, *args):
@@ -46,40 +51,40 @@ class VtM20Editor(QWidget):
     self.setWindowTitle('Vampire the Masquerade 20th Character Editor')
     #self.setWindowIcon(QIcon('web.png'))
 
-    vbox = QVBoxLayout()
+    vbox = borderless(QVBoxLayout())
     attributes_widget = QWidget()
     vbox.addWidget(attributes_widget)
     
-    hbox = QHBoxLayout()
+    hbox = borderless(QHBoxLayout())
     attributes_widget.setLayout(hbox)
 
     self.physical_widget = QWidget()
-    self.physical_widget.setLayout(QVBoxLayout())
+    self.physical_widget.setLayout(borderless(QVBoxLayout()))
     hbox.addWidget(self.physical_widget)
 
     self.social_widget = QWidget()
-    self.social_widget.setLayout(QVBoxLayout())
+    self.social_widget.setLayout(borderless(QVBoxLayout()))
     hbox.addWidget(self.social_widget)
 
     self.mental_widget = QWidget()
-    self.mental_widget.setLayout(QVBoxLayout())
+    self.mental_widget.setLayout(borderless(QVBoxLayout()))
     hbox.addWidget(self.mental_widget)
 
 
     abilities_widget = QWidget()
-    hbox = QHBoxLayout()
+    hbox = borderless(QHBoxLayout())
     abilities_widget.setLayout(hbox)
 
     self.talent_widget = QWidget()
-    self.talent_widget.setLayout(QVBoxLayout())
+    self.talent_widget.setLayout(borderless(QVBoxLayout()))
     hbox.addWidget(self.talent_widget)
 
     self.skill_widget = QWidget()
-    self.skill_widget.setLayout(QVBoxLayout())
+    self.skill_widget.setLayout(borderless(QVBoxLayout()))
     hbox.addWidget(self.skill_widget)
 
     self.knowledge_widget = QWidget()
-    self.knowledge_widget.setLayout(QVBoxLayout())
+    self.knowledge_widget.setLayout(borderless(QVBoxLayout()))
     hbox.addWidget(self.knowledge_widget)
 
 
