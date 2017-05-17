@@ -26,8 +26,59 @@ class VtM20Character(object):
     with open(sql_file, 'r') as f:
       self.db.executescript(f.read())
 
+  @property
   def availableArchetypes(self):
     return [row[0] for row in self.db.execute('SELECT * FROM Archetypes')]
+
+  @property
+  def availableClans(self):
+    return [row[0] for row in self.db.execute('SELECT * FROM Clans')]
+
+  @property
+  def availableDisciplines(self):
+    return [row[0] for row in self.db.execute('SELECT * FROM Disciplines')]
+
+  @property
+  def name(self):
+    return [row[0] for row in self.db.execute('SELECT Name FROM Vampire')][0]
+
+  @name.setter
+  def name(self, name):
+    self.db.execute('UPDATE Vampire SET Name = ?', (name,))
+
+  @property
+  def nature(self):
+    return [row[0] for row in self.db.execute('SELECT Nature FROM Vampire')][0]
+
+  @nature.setter
+  def nature(self, name):
+    self.db.execute('UPDATE Vampire SET Nature = ?', (name,))
+
+  @property
+  def concept(self):
+    return [row[0] for row in self.db.execute('SELECT Concept FROM Vampire')][0]
+
+  @concept.setter
+  def concept(self, name):
+    self.db.execute('UPDATE Vampire SET Concept = ?', (name,))
+
+  @property
+  def demeanor(self):
+    return [row[0] for row in self.db.execute('SELECT Demeanor FROM Vampire')][0]
+
+  @demeanor.setter
+  def demeanor(self, name):
+    self.db.execute('UPDATE Vampire SET Demeanor = ?', (name,))
+
+  @property
+  def clan(self):
+    return [row[0] for row in self.db.execute('SELECT Clan FROM Vampire')][0]
+
+  @clan.setter
+  def clan(self, name):
+    self.db.execute('UPDATE Vampire SET Clan = ?', (name,))
+
+
 
   def getTraits(self, category = None):
     if category:

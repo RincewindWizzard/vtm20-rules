@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+from slugify import slugify
 import os, pickle
 from collections import namedtuple
 import re
@@ -270,6 +271,33 @@ def toSQL(out):
 
   for archetype in rules['archetypes']:
     out.write("INSERT INTO Archetypes ('Name') VALUES ('{}');\n".format(archetype.name))
+
+  for discipline in rules['disciplines']:
+    out.write(
+      "INSERT INTO Traits ('Name', 'Type') VALUES ('{}', 'discipline');\n".format(
+      discipline.name
+    ))
+
+  for background in rules['backgrounds']:
+    out.write(
+      "INSERT INTO Traits ('Name', 'Type') VALUES ('{}', 'background');\n".format(
+      background.name
+    ))
+
+  #print(list(clan.name for clan in rules['disciplines']))
+  disciplines = { slugify(d.name):d for d in rules['disciplines'] }
+  for clan in rules['clans']:
+    out.write("INSERT INTO Clans ('Name') VALUES ('{}');\n".format(clan.name))
+    for slug in clan.disciplines:
+      if slug in disciplines:
+        out.write(
+          "INSERT INTO ClanDisciplines ('Clan', 'Discipline') VALUES ('{}', '{}');\n".format(
+          clan.name,
+          disciplines[slug].name
+        ))
+
+  # set default clan
+  #out.write("INSERT INTO Clan ('Name') VALUES ('Ventrue');\n")
 
 
 if __name__ == '__main__':

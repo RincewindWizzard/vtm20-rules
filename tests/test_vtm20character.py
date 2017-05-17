@@ -78,7 +78,7 @@ class TestVtM20(unittest.TestCase):
 
   def test_archetypes(self):
     vamp = VtM20Character()
-    archetypes = vamp.availableArchetypes()
+    archetypes = vamp.availableArchetypes
     for archetype in [
       'Cavalier', 'Capitalist', 'Deviant', 'Judge', 
       'Pedagogue', 'Curmudgeon', 'Penitent', 'Celebrant', 
@@ -90,6 +90,64 @@ class TestVtM20(unittest.TestCase):
       'Bon Vivant', 'Martyr', 'Sociopath', 'Survivor', 
       'Scientist', 'Dabbler', 'Enigma', 'Visionary']:
       self.assertTrue(archetype in archetypes)
+
+  def test_clans(self):
+    vamp = VtM20Character()
+    clans = vamp.availableClans
+    for clan in [
+      'Telyavelic Tremere', 'Lhiannan', 'Toreador', 'Brujah Antitribu', 'City Gangrel',
+      'Panders', 'Lasombra Antitribu', 'Kiasyd', 'Harbingers of Skulls',
+      'Angellis Ater (Potence)', 'Ahrimanes', 'Giovanni', 'Daitya', 'Gargoyles',
+      'Warrior Setites', 'Tremere Antitribu', 'Lasombra', 'Caitiff',
+      'Angellis Ater (Presence)', 'Cappadocians', 'Ravnos', 'Assamite Sorcerers',
+      'Ventrue Antitribu (Auspex)', 'Daughters of Cacophony', 'Salubri', 'Ravnos Antitribu',
+      'Malkavian Antitribu', 'Brahman', 'Wu Zao (Obeah)', 'Ventrue', 'Tremere', 'Malkavian',
+      'Assamite Antitribu', 'Assamite Viziers', 'Noiad', 'Children of Osiris', 'Assamite',
+      'Blood Brothers', 'Toreador Antitribu', 'Wu Zao (Valeren)', 'Followers of Set',
+      'Gangrel', 'Anda', 'Mariners', 'Country Gangrel', 'Nagaraja',
+      'Angellis Ater (Obtenebration)', 'Lamia', 'Salubri Antitribu', 'Dominate Malkavians',
+      'Brujah', 'Baali', 'Kolduns', 'Old Clan Tzimisce', 'Tzimisce', 'Samedi', 'True Brujah',
+      'Tlacique', 'Nosferatu Antitribu', 'Nosferatu', 'Ventrue Antitribu (Presence)',
+      'Serpents of the Light']:
+      self.assertTrue(clan in clans)
+
+  def test_disciplines(self):
+    vamp = VtM20Character()
+    disciplines = vamp.availableDisciplines
+    for discipline in [
+      'Koldunic Sorcery', 'Daimoinon', 'Celerity', 'Animalism', 'Mytherceria', 'Vicissitude',
+      'Protean', 'Obeah', 'Temporis', 'Dementation', 'Visceratika', 'Chimerstry', 'Auspex',
+      'Fortitude', 'Quietus', 'Thaumaturgy', 'Countermagic', 'Obfuscate', 'Flight',
+      'Obtenebration', 'Sanguinus', 'Necromancy', 'Valeren', 'Presence', 'Ogham', 'Dominate',
+      'Potence', 'Bardo', 'Assamite Sorcery', 'Spiritus',
+      'Thanatosis', 'Melpominee', 'Serpentis']:
+      self.assertTrue(discipline in disciplines)
+
+  def test_update_functions(self):
+    vamp = VtM20Character()
+    name = 'Guybrush Threepwood, mighty pirate'
+
+    self.assertEqual('', vamp.name)
+    vamp.name = name
+    self.assertEqual(name, vamp.name)
+
+    self.assertEqual('Architect', vamp.nature)
+    vamp.nature = vamp.availableArchetypes[-1]
+    self.assertEqual(vamp.availableArchetypes[-1], vamp.nature)
+
+    self.assertEqual('Architect', vamp.concept)
+    vamp.concept = vamp.availableArchetypes[-1]
+    self.assertEqual(vamp.availableArchetypes[-1], vamp.concept)
+
+    self.assertEqual('Architect', vamp.demeanor)
+    vamp.demeanor = vamp.availableArchetypes[-10]
+    self.assertEqual(vamp.availableArchetypes[-10], vamp.demeanor)
+
+    self.assertEqual('Ventrue', vamp.clan)
+    vamp.clan = vamp.availableClans[-1]
+    self.assertEqual(vamp.availableClans[-1], vamp.clan)
+
+    vamp.clan = 'fo'
 
     
 if __name__ == '__main__':

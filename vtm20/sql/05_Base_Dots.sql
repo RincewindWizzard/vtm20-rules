@@ -15,3 +15,4 @@ INSERT INTO Dots (Type, Trait) VALUES ('base', 'Appearance');
 INSERT INTO Dots (Type, Trait) VALUES ('base', 'Perception');
 INSERT INTO Dots (Type, Trait) VALUES ('base', 'Intelligence');
 INSERT INTO Dots (Type, Trait) VALUES ('base', 'Wits');
+

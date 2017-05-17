@@ -1,3 +1,6 @@
+CREATE VIEW Disciplines AS SELECT Name FROM Traits WHERE type = 'discipline';
+
+
 CREATE VIEW TraitValues AS
 SELECT Name, Traits.Type as Type, COUNT(Dots.Trait) as Dots
 FROM Traits

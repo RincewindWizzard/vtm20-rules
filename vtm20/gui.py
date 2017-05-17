@@ -63,6 +63,8 @@ class VtM20Editor(object):
     #self.setWindowIcon(QIcon('web.png'))
     self.ui = uic.loadUi(ui_file)
     self.addDotWidgets()
+    self.addArchetypes()
+    self.addClans()
 
   def addDotWidgets(self):
     self.ui.widget_physical_container.layout().setAlignment(
@@ -106,6 +108,15 @@ class VtM20Editor(object):
     )
     for trait in self.vamp.getTraits(KNOWLEDGE):
       DotWidget(self.ui.widget_knowledge.layout(), trait, self.vamp)
+
+  def addArchetypes(self):
+    archetypes = self.vamp.availableArchetypes
+    self.ui.nature_input.insertItems(0, archetypes)
+    self.ui.concept_input.insertItems(0, archetypes)
+    self.ui.demeanor_input.insertItems(0, archetypes)
+
+  def addClans(self):
+    self.ui.clan_input.insertItems(0, self.vamp.availableClans)
 
   def show(self):
     self.ui.show()

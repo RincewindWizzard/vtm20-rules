@@ -1,3 +1,4 @@
+
 ------------------------------------------------------------------------------------------------
 -- Types of Dots
 INSERT INTO DotTypes VALUES ('base');
@@ -26,3 +27,5 @@ INSERT INTO CreationDots (Type, Amount) VALUES ('Abilities', 13);
 INSERT INTO CreationDots (Type, Amount) VALUES ('Abilities', 9);
 INSERT INTO CreationDots (Type, Amount) VALUES ('Abilities', 5);
 INSERT INTO CreationDots (Type, Amount) VALUES ('Virtues', 7);
+
+
