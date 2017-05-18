@@ -6,6 +6,7 @@ clean:
 
 test:
 	cd tests/; python3 test_vtm20character.py
+	cd tests/; python3 test_rules.py
 
 vtm20/sql/CharacterTemplate.sql:
 	cd vtm20; python3 rules.py

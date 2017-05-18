@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 from slugify import slugify
+import threading
 import os, pickle
 from collections import namedtuple
 import re
+import asyncio
 
 # third party libraries
 import frontmatter
@@ -40,8 +42,7 @@ json_dst_path = os.path.join(module_path, '../build/vtm20_rules.json')
 pickle_dst_path = os.path.join(module_path, '../build/vtm20_rules.pickle')
 rules_dst_path = os.path.join(module_path, 'sql/04_Insert_Rules.sql')
 
-
-def backgrounds():
+def load_backgrounds():
   posts = []
   for mdfile in os.listdir(background_path):
     post = frontmatter.load(os.path.join(background_path, mdfile))
@@ -58,7 +59,8 @@ def backgrounds():
     ))
   return posts
 
-def merits():
+
+def load_merits():
   posts = []
   for mdfile in os.listdir(merits_path):
     post = frontmatter.load(os.path.join(merits_path, mdfile))
@@ -71,7 +73,8 @@ def merits():
     ))
   return posts
 
-def moralities():
+
+def load_moralities():
   posts = []
   for mdfile in os.listdir(morality_path):
     post = frontmatter.load(os.path.join(morality_path, mdfile))
@@ -89,8 +92,7 @@ def moralities():
     ))
   return posts
 
-
-def abilities():
+def load_abilities():
   posts = []
   for category in os.listdir(abilities_path):
     path = os.path.join(abilities_path, category)
@@ -110,7 +112,7 @@ def abilities():
       ))
   return posts
 
-def archetypes():
+def load_archetypes():
   posts = []
   for mdfile in os.listdir(archetypes_path):
     post = frontmatter.load(os.path.join(archetypes_path, mdfile))
@@ -120,9 +122,9 @@ def archetypes():
       description = post.content
     ))
   return posts
-  
 
-def clans():
+
+def load_clans():
   posts = []
   for mdfile in os.listdir(clan_path):
     post = frontmatter.load(os.path.join(clan_path, mdfile))
@@ -135,7 +137,7 @@ def clans():
     ))
   return posts
 
-def disciplines():
+def load_disciplines():
   posts = []
   for discipline in os.listdir(disciplines_path):
     discipline = os.path.join(disciplines_path, discipline)
@@ -162,11 +164,10 @@ def disciplines():
           powers = powers,
           description = post.content
         ))
-      
-
   return posts
-    
-def attributes():
+
+
+def load_attributes():
   posts = []
   for category in os.listdir(attributes_path):
     cat_path = os.path.join(attributes_path, category)
@@ -186,7 +187,7 @@ def attributes():
       ))
   return posts
 
-def virtues():
+def load_virtues():
   posts = []
   for mdfile in os.listdir(virtues_path):
     post = frontmatter.load(os.path.join(virtues_path, mdfile))
@@ -204,7 +205,8 @@ def virtues():
     ))
   return posts
 
-def sorcery_paths():
+
+def load_sorcery_paths():
   posts = []
   rex = re.compile('# *Level \d')
   for category in os.listdir(sorcery_path):
@@ -227,7 +229,7 @@ def sorcery_paths():
       ))
   return posts
 
-def sorcery_rituals():
+def load_sorcery_rituals():
   posts = []
   for category in os.listdir(rituals_path):
     cat_path = os.path.join(rituals_path, category)
@@ -240,72 +242,41 @@ def sorcery_rituals():
       ))
   return posts
 
+class VtM20Rules(object):
+  def __init__(self):
+    self._loader = threading.Thread(target=self._load_all)
+    self._lock = threading.Condition()
+    self._loader.start()
 
-rules = {
-  'abilities': abilities(),
-  'archetypes': archetypes(),
-  'attributes': attributes(),
-  'backgrounds': backgrounds(),
-  'clans': clans(),
-  'disciplines' : disciplines(),
-  'merits': merits(),
-  'moralities': moralities(),
-  'virtues': virtues(),
-  'sorcery': {
-    'paths' : sorcery_paths(),
-    'rituals': sorcery_rituals()
-  }
-}
+  def _load_all(self):
+    with self._lock:
+      self._backgrounds = load_backgrounds()
+      self._merits = load_merits()
+      self._moralities = load_moralities()
+      self._abilities = load_abilities()
+      self._archetypes = load_archetypes()
+      self._clans = load_clans()
+      self._disciplines = load_disciplines()
+      self._attributes = load_attributes()
+      self._virtues = load_virtues()
+      self._sorcery_paths = load_sorcery_paths()
+      self._sorcery_rituals = load_sorcery_rituals()
+      self._lock.notify_all()
 
-def toSQL(out):
-  # possible sqlinjection!
-  sql_fmt = "INSERT INTO Traits (Name, Type) VALUES ('{}', '{}');\n"
-  for ability in rules['abilities']:
-    out.write(sql_fmt.format(ability.name, ability.type))
+def getter_cons(attr):
+  def sync_getter(self):
+    while not hasattr(self, '_' + attr):
+      with self._lock:
+        ...
+    return getattr(self, '_' + attr)
+  return sync_getter
 
-  for attribute in rules['attributes']:
-    out.write(sql_fmt.format(attribute.name, attribute.category))
-
-  for virtue in rules['virtues']:
-    out.write(sql_fmt.format(virtue.name, 'virtue'))
-
-  for archetype in rules['archetypes']:
-    out.write("INSERT INTO Archetypes ('Name') VALUES ('{}');\n".format(archetype.name))
-
-  for discipline in rules['disciplines']:
-    out.write(
-      "INSERT INTO Traits ('Name', 'Type') VALUES ('{}', 'discipline');\n".format(
-      discipline.name
-    ))
-
-  for background in rules['backgrounds']:
-    out.write(
-      "INSERT INTO Traits ('Name', 'Type') VALUES ('{}', 'background');\n".format(
-      background.name
-    ))
-
-  #print(list(clan.name for clan in rules['disciplines']))
-  disciplines = { slugify(d.name):d for d in rules['disciplines'] }
-  for clan in rules['clans']:
-    out.write("INSERT INTO Clans ('Name') VALUES ('{}');\n".format(clan.name))
-    for slug in clan.disciplines:
-      if slug in disciplines:
-        out.write(
-          "INSERT INTO ClanDisciplines ('Clan', 'Discipline') VALUES ('{}', '{}');\n".format(
-          clan.name,
-          disciplines[slug].name
-        ))
-
-  # set default clan
-  #out.write("INSERT INTO Clan ('Name') VALUES ('Ventrue');\n")
+for attr in ['backgrounds', 'merits', 'moralities', 'abilities', 'archetypes', 'clans', 'disciplines', 'attributes', 'virtues', 'sorcery_paths', 'sorcery_rituals']:
+  setattr(VtM20Rules, attr, property(getter_cons(attr)))
 
 
-if __name__ == '__main__':
-  #with open(json_dst_path, 'w') as f:
-  #  f.write(json.dumps(rules, indent=4 * ' '))
+rules = VtM20Rules()
 
-  #with open(pickle_dst_path, 'wb') as f:
-  #  pickle.dump(rules, f)
-    
-  with open(rules_dst_path, 'w') as f:
-    toSQL(f)
+
+
+
